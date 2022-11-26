@@ -11,6 +11,7 @@ Simón Sara:
 Estudiante de abogacía en la UNCuyo, en pareja hace 7 años, trabaja en una empresa de mudanzas y disfruta de aprender idiomas.
 Jorge Salgado:
 Es el más veterano del grupo, trabaja en Aerolineas Argentinas, y tiene una hija. Disfruta de hacer deporte.
-Tomas Brusa,
+Tomas Brusa:
+Es Oficial de Comunicaciones del Ejercito Argentino, parte de la Fuerza de Operaciones Especiales, buzo y paracaidista, amante de los animales, la natacion y la tecnologia.
 Joseph Cardozo,
 Joaquin Gutierrez,
