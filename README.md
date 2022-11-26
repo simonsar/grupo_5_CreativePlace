@@ -15,3 +15,23 @@ Tomas Brusa:
 Es Oficial de Comunicaciones del Ejercito Argentino, parte de la Fuerza de Operaciones Especiales, buzo y paracaidista, amante de los animales, la natacion y la tecnologia.
 Joseph Cardozo,
 Joaquin Gutierrez,
+
+3) Elegimos por la estética: 
+- https://platzi.com
+- https://www.soyhenry.com
+
+Tanto Platzi como Henry nos parecen estéticamente agradables, coloridos, interesantes desde el punto de vista visual. Además el primero nos parece que cuenta con una interfáz simple y entendible para el usuario.
+
+Elegimos por la funcionalidad:
+- https://www.zara.com
+- https://www.levi.com.ar
+- https://es.khanacademy.org
+
+Estas páginas nos parecen interesantes en cuánto a su funcionalidad y la forma práctica de interactuar con las mismas.
+
+Elegimos por los clientes a los que queremos apuntar:
+- https://es.coursera.org
+
+Consideramos que esta plataforma tiene un alcance masivo de clientes a los cuáles apuntamos.
+
+La mayoría de las páginas mencionas (a excepción de Zara y Levis) contienen los servicios y productos que deseamos ofrecer, esto es, cursos profesionales a distancia de la industria IT.
