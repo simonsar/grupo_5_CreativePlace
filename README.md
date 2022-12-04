@@ -25,12 +25,16 @@ Elegimos por la funcionalidad:
 - [Zara](https://www.zara.com)
 - [Levi´s](https://www.levi.com.ar)
 - [KhanAcademy](https://es.khanacademy.org)
+- [DigitalHouse](https://www.digitalhouse.com/ar/)  
 
 Estas páginas nos parecen interesantes en cuánto a su funcionalidad y la forma práctica de interactuar con las mismas.
-
+    
 Elegimos por los clientes a los que queremos apuntar:
 - [Coursera](https://es.coursera.org)
 
 Consideramos que esta plataforma tiene un alcance masivo de clientes a los cuáles apuntamos.
 
 La mayoría de las páginas mencionas (a excepción de Zara y Levis) contienen los servicios y productos que deseamos ofrecer, esto es, cursos profesionales a distancia de la industria IT.
+
+## Wireframes
+- [NuestroProyecto](https://www.figma.com/file/C38jSeYOrSzDkwEDoHLEiF/Registro?node-id=0%3A1&t=r5miS76vsBS3YjAt-1)
