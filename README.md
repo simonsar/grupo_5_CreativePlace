@@ -37,4 +37,8 @@ Consideramos que esta plataforma tiene un alcance masivo de clientes a los cuál
 La mayoría de las páginas mencionas (a excepción de Zara y Levis) contienen los servicios y productos que deseamos ofrecer, esto es, cursos profesionales a distancia de la industria IT.
 
 ## Wireframes
-- [NuestroProyecto](https://www.figma.com/file/C38jSeYOrSzDkwEDoHLEiF/Registro?node-id=0%3A1&t=r5miS76vsBS3YjAt-1)
+- [NuestroProyecto](https://www.figma.com/file/C38jSeYOrSzDkwEDoHLEiF/Creative-Place?node-id=142%3A24&t=CujxolYZ2Uni9qAQ-1)
+
+## Trello
+
+- [Trello](https://trello.com/invite/b/RQy0qafO/ATTIa1f818886f6041c3ad390d50522957aeA342A17D/grupo-5-creativeplace)
