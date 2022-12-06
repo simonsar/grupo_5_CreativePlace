@@ -12,7 +12,7 @@ Esta página está dirigida a cualquier persona a partir de los 16 años que des
 - Jorge Salgado: Es el más veterano del grupo, trabaja en Aerolineas Argentinas, y tiene una hija. Disfruta de hacer deporte.
 - Tomas Brusa: Es Oficial de Comunicaciones del Ejercito Argentino, parte de la Fuerza de Operaciones Especiales, buzo y paracaidista, amante de los animales, la natacion y la tecnologia.
 - Joseph Cardozo,
-- Joaquin Gutierrez,
+- Joaquin Gutierrez: Estudiante de testing de software y técnico en reparación de PCs. Trabajo dando Soporte TI. Me gusta la NBA y tengo un perro que se llama Toto.
 
 ## Páginas de referencia
 Elegimos por la estética: 
