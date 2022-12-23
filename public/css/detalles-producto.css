@@ -2,22 +2,36 @@ body{
     margin: 0px;
     font-family: 'Chivo Mono';
 }
+
+ul{
+    padding: 0px;
+}
+
+ul li{
+    list-style-type: none;
+    padding: 10px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+}
 /*Header*/
 header{
     background-color: #D7D7D7;
     margin: 0;
 }
 
-header section article div ul{
+ul{
     padding: 0px;
 }
 
-header section article div ul li{
+ul li{
     list-style-type: none;
     padding: 10px;
 }
 
-header section article div ul li a{
+ul li a{
     text-decoration: none;
     color: black;
 }
@@ -129,8 +143,61 @@ main section article form{
 
 footer{
     background-color: #d9d9d9;
+    padding: 15px;
 }
 
 footer p{
     margin: 0px;
+    position: relative;
+}
+
+footer section article div.iconos-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+footer section article div.iconos-footer i{
+    padding: 5px;
+    font-size: 20px;
+}
+footer section article.iconos-links{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+footer section article div.links-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer section article div.contacto{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left:10px;
+}
+
+footer section article div.contacto p{
+    font-size: 16px;
+    padding: 2px;
+}
+
+footer section article div.copyright{
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.copyright p{
+    font-size: 16px;
+}
+
+@media (min-width:768px){
+
+}
+
+@media (min-width:1280px){
+    
 }
