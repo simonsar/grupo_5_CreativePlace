@@ -8,6 +8,62 @@ header{
     margin: 0;
 }
 
+header section article div ul{
+    padding: 0px;
+}
+
+header section article div ul li{
+    list-style-type: none;
+    padding: 10px;
+}
+
+header section article div ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+header section article div.links{
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 80px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    width: 240px;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+header section article input{
+    display: none;
+}
+
+header section article input:checked ~ div.links{
+    display: flex;
+}
+
+header section article label{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    font-size: 25px;
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+}
+
+header section article form button{
+    background-color: #4e69cb;
+    border: #4e69cb;
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    align-self: center;
+    color: white;
+}
+
 .logo-bars{
     display: flex;
     flex-wrap: wrap;
@@ -22,21 +78,6 @@ header{
     font-family: 'Chivo Mono', monospace;
     margin: 0px;
     padding-left: 5px;
-}
-
-div.barras{
-    display: flex;
-    flex-wrap: wrap;
-    color: black;
-    font-size: 25px;
-    height: 30px;
-    width: 30px;
-    padding: 10px;
-}
-
-i{
-    width: 50px;
-    height: 50px;
 }
 
 /*Main*/
