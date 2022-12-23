@@ -185,9 +185,11 @@ footer section article div.contacto p{
     padding: 2px;
 }
 
-footer section article div.copyright{
+footer section div.copyright{
+    padding-top: 10px;
     display: flex;
     justify-content: flex-end;
+    width: 100%;
 }
 
 div.copyright p{
@@ -199,5 +201,5 @@ div.copyright p{
 }
 
 @media (min-width:1280px){
-    
+
 }
