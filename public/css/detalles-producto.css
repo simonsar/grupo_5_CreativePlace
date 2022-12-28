@@ -7,12 +7,12 @@ ul{
     padding: 0px;
 }
 
-ul li{
+li{
     list-style-type: none;
     padding: 10px;
 }
 
-ul li a{
+li a{
     text-decoration: none;
     color: black;
 }
@@ -22,19 +22,6 @@ header{
     margin: 0;
 }
 
-ul{
-    padding: 0px;
-}
-
-ul li{
-    list-style-type: none;
-    padding: 10px;
-}
-
-ul li a{
-    text-decoration: none;
-    color: black;
-}
 
 header section article div.links{
     display: none;
@@ -109,14 +96,20 @@ main section article.primera-parte{
     align-items: center;
 }
 
+main section article div.deseados-boton{
+    width: 100%;
+}
+
 h2{
     margin: 0px;
     font-size: 25px;
 }
 
 p{
+    margin: 0px;
     font-size: 20px;
 }
+
 
 .imagen{
     width: 100%;
@@ -126,11 +119,19 @@ main section article div.titulo-texto{
     padding-top: 15px;
 }
 
+main section article div.deseados{
+    display: flex;
+    justify-content: center;
+}
+
 main section article form button{
     background-color: #4e69cb;
     border: #4e69cb;
+    border-radius: 10px;
     width: 80%;
     height: 63px;
+    color: white;
+    font-size: 24px;
 }
 
 main section article form{
@@ -138,6 +139,62 @@ main section article form{
     justify-content: center;
     width: 100%;
 }
+
+.plan-estudios{
+    display: flex;
+    align-self: center;
+}
+
+main section.section-modulos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+main section article.contenedor-modulos{
+    width: 100%;
+}
+
+main section article div.modulos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #d9d9d9;
+    height: 75px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2% 5%;
+    padding: 0% 5%;
+}
+
+main section article div.plan{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #d9d9d9;
+    height: 75px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2% 5%;
+}
+
+main section article div span.simbolos-p{
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 5%;
+    align-items: center;
+}
+
+main section article div span p.p-plan{
+    padding-left: 5%;
+}
+
 
 /*Footer*/
 
@@ -196,7 +253,10 @@ div.copyright p{
     font-size: 16px;
 }
 
+/*Media query*/
+
 @media (min-width:768px){
+    
 
 }
 
