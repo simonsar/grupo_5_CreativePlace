@@ -10,10 +10,9 @@
     <title>detalle de producto</title>
 </head>
 <body>
-    <header>
-        <section class="logo-bars">
+    <header class="logo-bars">
             <h2 class="logo">Creative Place</h2>
-                <article class="menu-desplegable">
+            <article class="menu-desplegable"><!--Caja del menú desplegable-->
                     <input type="checkbox" name="menu-hamburguesa" id="menu-hamburguesa">
                     <label for="menu-hamburguesa"><i class="fas fa-bars"></i></label>
                     <div class="links">
@@ -27,8 +26,18 @@
                             <li><a href="#">Empresas</a></li>
                         </ul>
                     </div>
-                </article>
-        </section>
+            </article>
+            <nav class="vista-desktop">
+                <a href="#">Cursos</a>
+                <a href="#">Sobre nosotros</a>
+                <a href="#">Contáctanos</a>
+                <a href="#">Empresas</a>
+            </nav>
+            <form action="#" method="post" class="vista-desktop">
+                <input type="search" name="search" id="search" placeholder="Estoy buscando...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form>                
+            <a href="#" class="vista-desktop">iniciar Sesión</a> 
     </header>
     <main>
         <section>
@@ -39,6 +48,7 @@
                         Full Stack developer.
                     </h2>
                     <p>En este curso aprenderás todo lo necesario para ser un full stack developer, saldrás con todos los conocimientos necesarios de front-end y back-end para iniciarte en el mundo de la programación.</p>
+                    <h3 class="precio">$15.000</h3>
                 </div>
                 <div class="deseados-boton">
                     <div class="deseados">

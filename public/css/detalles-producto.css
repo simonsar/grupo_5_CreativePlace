@@ -12,7 +12,7 @@ li{
     padding: 10px;
 }
 
-li a{
+li a, header nav a{
     text-decoration: none;
     color: black;
 }
@@ -22,8 +22,11 @@ header{
     margin: 0;
 }
 
+header .vista-desktop{
+    display: none;
+}
 
-header section article div.links{
+header article div.links{
     display: none;
     position: absolute;
     right: 30px;
@@ -36,15 +39,15 @@ header section article div.links{
     padding: 20px 0px;
 }
 
-header section article input{
+header article input{
     display: none;
 }
 
-header section article input:checked ~ div.links{
+header article input:checked ~ div.links{
     display: flex;
 }
 
-header section article label{
+header article label{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -55,7 +58,7 @@ header section article label{
     padding: 10px;
 }
 
-header section article form button{
+header article form button{
     background-color: #4e69cb;
     border: #4e69cb;
     width: 80%;
@@ -94,6 +97,10 @@ main section article.primera-parte{
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+}
+
+main section article div h3.precio{
+    display: none;
 }
 
 main section article div.deseados-boton{
@@ -261,5 +268,16 @@ div.copyright p{
 }
 
 @media (min-width:1280px){
-
+    /*Header*/
+    header article label{
+        display: none;
+    }
+    header .vista-desktop{
+        display: flex;
+    }
+    /*Header*/
+    /*Main*/
+    /*Main*/
+    /*Footer*/
+    /*Footer*/
 }

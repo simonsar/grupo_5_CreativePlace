@@ -41,4 +41,4 @@ La mayoría de las páginas mencionas (a excepción de Zara y Levis) contienen l
 
 ## Trello
 
-- [Trello](https://trello.com/invite/b/RQy0qafO/ATTIa1f818886f6041c3ad390d50522957aeA342A17D/grupo-5-creativeplace)
+- [Trello](https://trello.com/b/RQy0qafO/grupo-5-creativeplace)
