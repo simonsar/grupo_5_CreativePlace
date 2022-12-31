@@ -87,6 +87,10 @@ header article form button{
     margin: 0px;
     padding-left: 5px;
 }
+/*main*/
+main section img.imagen{
+    width: 100%;
+}
 /* footer */
 
 footer{
