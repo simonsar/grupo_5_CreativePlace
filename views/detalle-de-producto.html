@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ad448170b5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/detalles-producto.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <title>detalle de producto</title>
 </head>
 <body>
@@ -41,80 +44,78 @@
     </header>
     <main>
         <section>
+            <img src="img/pexels-img2.jpg" alt="img" class="imagen">
             <article class="primera-parte">
-                <img src="img/pexels-img2.jpg" alt="img" class="imagen">
                 <div class="titulo-texto">
-                    <h2>
+                    <h2 class="titulo-curso">
                         Full Stack developer.
                     </h2>
                     <p>En este curso aprenderás todo lo necesario para ser un full stack developer, saldrás con todos los conocimientos necesarios de front-end y back-end para iniciarte en el mundo de la programación.</p>
                     <h3 class="precio">$15.000</h3>
                 </div>
-                <div class="deseados-boton">
+                <div class="contenedor-divs-deseados-boton">
                     <div class="deseados">
                         <li><a href="#">Añadir a la lista de deseados</a></li>
                     </div>
-                    <form action="#" method="get">
-                        <button type="submit" class="botones">Añadir al carrito</button>
-                    </form>
+                    <div class="deseados-boton">
+                        <a href="#" class="botones">Añadir al carrito</a>
+                        <a href="#" class="vista-desktop">¡Comparar ya!</a>
+                    </div>
                 </div>
             </article>
         </section>
         <section class="section-modulos">
-            <h2>Plan de estudios</h2>
             <article class="contenedor-modulos">
+                <h2>Plan de estudios</h2>
                 <div class="modulos"><p>Módulo 1</p></div>
                 <div class="modulos"><p>Módulo 2</p></div>
                 <div class="modulos"><p>Módulo 3</p></div>
                 <div class="modulos"><p>Módulo 4</p></div>
                 <div class="modulos"><p>Módulo 5</p></div>
             </article>
-        </section>
-
-        <section class="section-modulos">
-            <h2>Plan de estudios</h2>
-            <article class="contenedor-modulos">
-                <div class="plan">
+            <article class="contenedor-modulos-modalidad">
+                <h2>Modalidad</h2>
+                <ul>
+                <li class="plan">
+                    <i class="fa-solid fa-calendar-days"></i>
                     <span class="simbolos-p">
-                        <i class="fa-solid fa-calendar-days"></i>
                         <p class="p-plan">Duración</p>
+                        <p class="vista-desktop">5 meses</p>
                     </span>
-                </div>
-                <div class="plan">
+                </li>
+                <li class="plan">
+                    <i class="fa-solid fa-laptop"></i>
                     <span class="simbolos-p">
-                        <i class="fa-solid fa-laptop"></i>
-                        <p class="p-plan">Horarios</p>
+                        <p class="p-plan">Dedicación semanal</p>
+                        <p class="vista-desktop">martes y jueves 21hs - 23:30hs</p>
                     </span>
-                </div>
-                <div class="plan">
+                    
+                </li>
+                <li class="plan">
+                    <i class="far fa-file"></i></i>
                     <span class="simbolos-p">
-                        <i class="far fa-file"></i></i>
                         <p class="p-plan">Fechas</p>
+                        <p class="vista-desktop">Julio-Diciembre-Marzo</p>
                     </span>
-                </div>
-                <div class="plan">
+                </li>
+                <li class="plan">
+                    <i class="fa-regular fa-clock"></i>
                     <span class="simbolos-p">
-                        <i class="fa-regular fa-clock"></i>
                         <p class="p-plan">Turnos</p>
+                        <p class="vista-desktop">Noche</p>
                     </span>
+                </li>
+                </ul>
+                <div class="div-descargar-programa">
+                    <a href="#" class="vista-desktop">Descargar programa</a>
                 </div>
             </article>
-        </section>
-        
+        </section>    
     </main>
     <footer>
-        <section>
+        <section class="mobile-footer">
             <h2 class="logo">Creative Place</h2>
             <article class="iconos-links">
-                <div class="iconos-footer">
-                    <i class="fa-brands fa-youtube"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <i class="fa-brands fa-whatsapp"></i>
-                </div>
-                
                 <div class="links-footer">
                     <ul>
                         <li><a href="#">Términos y condiciones</a></li>
@@ -130,11 +131,51 @@
                         </span>
                     </div>
                 </div>
+                <div class="iconos-footer">
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
             </article>
             <div class="copyright">
                 <p>© 2022 Creative Place</p>
             </div>
         </section>
+        <section class="vista-desktop">
+            <article class="logo-iconos-desktop">
+                <h2 class="logo">Creative Place</h2>
+                <div class="iconos-footer-desktop">
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </article>
+            <div class="contacto-desktop">
+                <li class="comunidad"><a href="#">Comunidad</a></li>
+                <div>
+                    <p class="p-contacto">contacto:</p>
+                    <span>
+                        <p>CreativePlace@gmail.com</p>
+                        <p>+54 9 1224378</p>
+                    </span>
+                </div>
+                
+            </div>
+            <ul>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Políticas de privacidad</a></li>
+                <li><a href="#">Sobre nosotros</a></li>
+            </ul>
+        </section>
+        <div class="copyright-desktop vista-desktop">
+                <p>© 2022 Creative Place</p>
+            </div>
     </footer>
 </body>
 </html>
