@@ -434,11 +434,11 @@ div.copyright p{
     main section article div.div-descargar-programa{
         display: flex;
         justify-content: center;
-        width: 80%;
+        width: 100%;
         align-self: center;
     }
     main section article div.div-descargar-programa a{
-        width: 100%
+        width: 80%
     }
     /*Main*/
     /*Footer*/
