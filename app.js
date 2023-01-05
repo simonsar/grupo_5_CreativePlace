@@ -15,3 +15,7 @@ app.get("/", (req, res) => {
 app.get("/detalle-de-producto", (req, res) => {
     res.sendFile(__dirname + '/views/detalle-de-producto.html')
 });
+
+app.get('/login', (req,res) => {
+    res.sendFile(__dirname + '/views/login.html')
+});
