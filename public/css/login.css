@@ -1,6 +1,33 @@
+body{
+    margin: 0px;
+    font-family: 'Abel', sans-serif;
+
+}
+
+ul{
+    padding: 0px;
+}
+
+li{
+    list-style-type: none;
+    padding: 10px;
+}
+
+li a, header nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+p{
+    margin: 0px;
+    font-size: 25px;
+}
+
+/*Header*/
 header{
     background-color: #D7D7D7;
-    margin: 0;
+    margin: 0px;
 }
 
 
@@ -61,8 +88,6 @@ header article form button{
     margin: 0px;
     padding-left: 5px;
 }
-
-
 
 
 .login-container{
@@ -144,7 +169,13 @@ footer section div.copyright{
 div.copyright p{
     font-size: 20px;
 }
-/* media query*/
+
+.vista-desktop{
+    display: none;
+}
+
+/*Media query*/
+
 @media (min-width:1280px){
     .logo{
         color: black;
@@ -186,9 +217,118 @@ div.copyright p{
         padding: 0% 2%;
         align-items: center;
     }
+    /*Header*/
+    /*Main*/
+    .imagen{
+        width: 50%;
+    }
+    
+    main section{
+        display: flex;
+    }
 
-     /*footer*/
-     footer{
+    main section article.primera-parte{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0% 2%;
+
+    }
+
+    main section article a.botones{
+        display: flex;
+        background-color: #4e69cb;
+        border: #4e69cb;
+        width: 40%;
+        height: 60px;
+        border-radius: 10px;
+        align-self: center;
+        color: white;
+        text-decoration: none;
+        justify-content: center;
+        padding: 0% 2%;
+        align-items: center; 
+    }
+
+    main section article div.titulo-texto{
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-self: flex-start;
+    }
+
+    main section.section-modulos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    main section article.contenedor-modulos{
+        width: 60%;
+    }
+
+    main section article.contenedor-modulos-modalidad{
+        width: 40%;
+    }
+
+    main section article div.contenedor-divs-deseados-boton{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    main section article div div.deseados-boton{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    main section article.contenedor-modulos-modalidad{
+        background-color: #ffff;
+        border-radius: 10px;
+        padding: 2% 0%;
+    }
+    main section article.contenedor-modulos-modalidad li.plan{
+        background-color: unset;
+    }
+
+    main section article div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main section article li.plan{
+        display: flex;
+        background-color: #d9d9d9;
+        border-radius: 10px;
+        align-items: flex-start;
+        margin: 2% 5%;
+    }
+
+    main section article li.plan span p.p-plan{
+        font-weight: bold;
+    }
+
+    main section article div.div-descargar-programa{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-self: center;
+    }
+    main section article div.div-descargar-programa a{
+        width: 80%
+    }
+    /*Main*/
+    /*Footer*/
+
+    footer{
         display: flex;
         position: relative;
     }
