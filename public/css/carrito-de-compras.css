@@ -24,6 +24,7 @@ p{
     font-size: 25px;
 }
 
+
 /*Header*/
 header{
     background-color: #D7D7D7;
@@ -88,136 +89,41 @@ header article form button{
     margin: 0px;
     padding-left: 5px;
 }
+/*Header*/
 
 /*Main*/
 
 main{
-    background-color: #ededed;
-    margin: 20px 0px;
-    padding: 35px;
-}
-
-main section article.primera-parte{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-main section article div h3.precio{
-    display: none;
-}
-
-main section article div.deseados-boton{
-    width: 100%;
-}
-
-h2{
-    margin: 0px;
-    font-size: 25px;
-}
-
-main section article.contenedor-modulos h2, main section article.contenedor-modulos-modalidad h2{
-    display: flex;
-    justify-content: center;
-}
-
-.imagen{
-    width: 100%;
-}
-
-main section article div.titulo-texto{
-    padding-top: 15px;
-}
-
-main section article div.contenedor-divs-deseados-boton{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    margin: 5%;
 }
 
-main section article div.deseados{
-    display: flex;
-    justify-content: center;
-}
-
-.botones{
-    background-color: #4e69cb;
-    border: #4e69cb;
-    height: 60px;
-    border-radius: 10px;
-    align-self: center;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    padding: 0% 2%;
-    align-items: center;
-    font-size: 25px;
-}
-
-main
-
-main section article form{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.plan-estudios{
-    display: flex;
-    align-self: center;
-}
-
-main section.section-modulos{
+main section.seccion-1{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
 }
 
-main section article.contenedor-modulos, main section article.contenedor-modulos-modalidad{
+main section.seccion-1 img {
     width: 100%;
 }
 
-main section article div.modulos{
+main section.seccion-2 form{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+}
+
+main section.seccion-2 form input{
+    display: flex;
+    width: 100%;
     background-color: #d9d9d9;
-    height: 75px;
+    border: 1px #d9d9d9;
     border-radius: 10px;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 2% 5%;
-    padding: 0% 5%;
 }
 
-main section article li.plan{
-    display: flex;
-    background-color: #d9d9d9;
-    height: 75px;
-    border-radius: 10px;
-    align-items: center;
-    margin: 2% 5%;
-}
-
-main section article li span.simbolos-p{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0% 2%;
-}
-
-main section article li.plan i{
-    font-size: 25px;
-}
+/*Main*/
 
 /*Footer*/
-
 footer{
     background-color: #d9d9d9;
     padding: 15px;
@@ -270,9 +176,12 @@ div.copyright p{
     font-size: 20px;
 }
 
+/*Footer*/
+
 .vista-desktop{
     display: none;
 }
+
 
 /*Media query*/
 

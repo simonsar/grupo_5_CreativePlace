@@ -19,3 +19,7 @@ app.get("/detalle-de-producto", (req, res) => {
 app.get('/login', (req,res) => {
     res.sendFile(__dirname + '/views/login.html')
 });
+
+app.get('/carrito-de-compras', (req,res) => {
+    res.sendFile(__dirname + '/views/carrito-de-compras.html')
+});
