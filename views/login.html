@@ -9,69 +9,58 @@
     <script src="https://kit.fontawesome.com/ad448170b5.js" crossorigin="anonymous"></script>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-    <link rel="Stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
     <title>Creative place</title>
 </head>
 <body>
-        <header class="logo-bars">
-            <h2 class="logo">Creative Place</h2>
-            <article class="menu-desplegable"><!--Caja del menú desplegable-->
-                    <input type="checkbox" name="menu-hamburguesa" id="menu-hamburguesa">
-                    <label for="menu-hamburguesa"><i class="fas fa-bars"></i></label>
-                    <div class="links">
-                        <form action="#" method="post">
-                            <button>Iniciar Sesión</button>
-                        </form>
-                        <ul>
-                            <li><a href="#">Cursos</a></li>
-                            <li><a href="#">Sobre nosotros</a></li>
-                            <li><a href="#">Contáctanos</a></li>
-                            <li><a href="#">Empresas</a></li>
-                        </ul>
-                    </div>
-            </article>
-            <nav class="vista-desktop">
-                <a href="#">Cursos</a>
-                <a href="#">Sobre nosotros</a>
-                <a href="#">Contáctanos</a>
-                <a href="#">Empresas</a>
-            </nav>
-            <form action="#" method="post" class="vista-desktop">
-                <input type="search" name="search" id="search" placeholder="Estoy buscando...">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </form>                
-            <a href="#" class="vista-desktop">Iniciar Sesión</a> 
-    </header>
-    <main>
-        <section>
-            <img src="img/img-home.jpg" alt="img" class="imagen">
-            <h1>Bienvenidos a Creative Pleace</h1>
-            <p> 
-                En este espacio vas a encontrar lo que te impulsa al futuro
-            </p>
-            <button>¡Aplica aqui!</button>               
-        </section>
-        <section>
-        <a href="#">
-          Marketing Digital
-        </a>
-        <a href="#">
-            Ingles para Programadores
-          </a>
-          <a href="#">
-            Data Analitycs
-          </a>
-          <a href="#">
-            Data Science
-          </a>
-          <a href="#">
-            Full Stack Developper
-          </a>
-          <a href="#">
-            Cyber Security
-          </a>
-        </section>
-    </main> 
+    <header class="logo-bars">
+        <h2 class="logo">Creative Place</h2>
+        <article class="menu-desplegable"><!--Caja del menú desplegable-->
+                <input type="checkbox" name="menu-hamburguesa" id="menu-hamburguesa">
+                <label for="menu-hamburguesa"><i class="fas fa-bars"></i></label>
+                <div class="links">
+                    <form action="#" method="post">
+                        <button>Iniciar Sesión</button>
+                    </form>
+                    <ul>
+                        <li><a href="#">Cursos</a></li>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                        <li><a href="#">Empresas</a></li>
+                    </ul>
+                </div>
+        </article>
+        <nav class="vista-desktop">
+            <a href="#">Cursos</a>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Contáctanos</a>
+            <a href="#">Empresas</a>
+        </nav>
+        <form action="#" method="post" class="vista-desktop">
+            <input type="search" name="search" id="search" placeholder="Estoy buscando...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>                
+        <a href="#" class="vista-desktop">iniciar Sesión</a> 
+</header>
+    <main class="login-container">
+
+        <section class="login-col b-blue"><div class="message-login">Hola, ¡volviste!</div></section>
+        
+            <form action="" class="login-col"> 
+                <input type="email" class="email" placeholder="Correo electrónico">
+                <input type="password" class="password" placeholder="Contraseña">
+                <input type="checkbox" class="remember"><span>Recordarme</span>
+                <button class="login-button">Iniciar Sesión</button>
+                <a href="#" class="t-bold">¿No tenes cuenta? Hace click aquí</a>
+                <a href="#" class="t-bold">¿Olvidaste tu contraseña?</a>
+                <button class="social-button"><span class="icon"><i class="fa-brands fa-google"></i></span><span class="text">Iniciar sesión con Facebook</span></button>
+                <button class="social-button"><span class="icon"><i class="fa-brands fa-facebook"></i></span><span class="text">Iniciar sesión con Google</span></button>
+
+            </form>
+        
+        
+    </main>
+
     <footer>
         <section class="mobile-footer">
             <h2 class="logo">Creative Place</h2>
@@ -94,7 +83,7 @@
                 <div class="iconos-footer">
                     <i class="fa-brands fa-youtube"></i>
                     <i class="fa-brands fa-facebook"></i>
-                    
+                    <i class="fa-brands fa-twitter"></i>
                     <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-linkedin"></i>
                     <i class="fa-brands fa-whatsapp"></i>
