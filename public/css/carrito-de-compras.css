@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     margin: 0px;
     font-family: 'Abel', sans-serif;
@@ -111,6 +115,8 @@ main section.seccion-1 img {
 main section.seccion-2 form{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    background-color: black;
 }
 
 main section.seccion-2 form input{
@@ -119,6 +125,13 @@ main section.seccion-2 form input{
     background-color: #d9d9d9;
     border: 1px #d9d9d9;
     border-radius: 10px;
+    font-size: 15px;
+    padding: 1%;
+    margin: 1% 0%;
+}
+
+main section.seccion-2 form div.iconos{
+    font-size: 20px;
 }
 
 /*Main*/
