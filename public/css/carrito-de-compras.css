@@ -28,7 +28,6 @@ p{
     font-size: 25px;
 }
 
-
 /*Header*/
 header{
     background-color: #D7D7D7;
@@ -116,7 +115,6 @@ main section.seccion-2 form{
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: black;
 }
 
 main section.seccion-2 form input{
@@ -126,12 +124,27 @@ main section.seccion-2 form input{
     border: 1px #d9d9d9;
     border-radius: 10px;
     font-size: 15px;
-    padding: 1%;
+    padding: 2%;
     margin: 1% 0%;
 }
 
 main section.seccion-2 form div.iconos{
     font-size: 20px;
+}
+
+.botones{
+    background-color: #4e69cb;
+    border: #4e69cb;
+    height: 60px;
+    border-radius: 10px;
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 0% 2%;
+    align-items: center;
+    font-size: 25px;
 }
 
 /*Main*/
@@ -241,111 +254,33 @@ div.copyright p{
     }
     /*Header*/
     /*Main*/
-    .imagen{
+    main{
+        flex-direction: row;
+        background-color: #ededed;
+        margin: 2% 0%;
+        padding: 2%;
+        justify-content: space-between
+    }
+
+    main section.seccion-1{
+        width: 40%;
+        padding-left: 2%;
+    }
+
+    main section.seccion-2{
+        background-color: white;
         width: 50%;
+        padding: 2%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+    main section.seccion-2 form div.iconos{
+        font-size: 25px;
     }
     
-    main section{
-        display: flex;
-    }
-
-    main section article.primera-parte{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 0% 2%;
-
-    }
-
-    main section article a.botones{
-        display: flex;
-        background-color: #4e69cb;
-        border: #4e69cb;
-        width: 40%;
-        height: 60px;
-        border-radius: 10px;
-        align-self: center;
-        color: white;
-        text-decoration: none;
-        justify-content: center;
-        padding: 0% 2%;
-        align-items: center; 
-    }
-
-    main section article div.titulo-texto{
-        height: 40%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-self: flex-start;
-    }
-
-    main section.section-modulos {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    main section article.contenedor-modulos{
+    main section div.boton{
         width: 60%;
-    }
-
-    main section article.contenedor-modulos-modalidad{
-        width: 40%;
-    }
-
-    main section article div.contenedor-divs-deseados-boton{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    main section article div div.deseados-boton{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    main section article.contenedor-modulos-modalidad{
-        background-color: #ffff;
-        border-radius: 10px;
-        padding: 2% 0%;
-    }
-    main section article.contenedor-modulos-modalidad li.plan{
-        background-color: unset;
-    }
-
-    main section article div{
-        display: flex;
-        flex-direction: column;
-    }
-
-    main section article li.plan{
-        display: flex;
-        background-color: #d9d9d9;
-        border-radius: 10px;
-        align-items: flex-start;
-        margin: 2% 5%;
-    }
-
-    main section article li.plan span p.p-plan{
-        font-weight: bold;
-    }
-
-    main section article div.div-descargar-programa{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        align-self: center;
-    }
-    main section article div.div-descargar-programa a{
-        width: 80%
     }
     /*Main*/
     /*Footer*/
