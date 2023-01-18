@@ -12,7 +12,7 @@ ul{
     padding: 0px;
 }
 
-li{
+header li, footer li{
     list-style-type: none;
     padding: 10px;
 }
@@ -23,9 +23,10 @@ li a, header nav a{
     font-size: 25px;
 }
 
-p{
-    margin: 0px;
+p {
+    margin: 1%;
     font-size: 25px;
+    text-align: center;
 }
 
 /*Header*/
@@ -103,23 +104,39 @@ main{
 }
 
 main section.seccion-1{
-    display: flex;
-    flex-direction: column;
+    display: none;
 }
 
-main section.seccion-1 img {
-    width: 100%;
+.message-register {
+    color: white;
+    font-size: 25px;
+    padding-top: 50px;
 }
+
+/* Empresas */
+
+
+
+.seccion-1 a, .seccion-1 li{
+    color: white;
+}
+
+.seccion-1 ul{
+    padding-left: 12%;
+}
+
+/* Empresas */
 
 main section.seccion-2 form{
     display: flex;
     flex-direction: column;
     width: 100%;
+    align-items: center;
 }
 
-main section.seccion-2 form input{
+main section.seccion-2 form input, main section.seccion-2 form select{
     display: flex;
-    width: 100%;
+    width: 80%;
     background-color: #d9d9d9;
     border: 1px #d9d9d9;
     border-radius: 10px;
@@ -128,14 +145,25 @@ main section.seccion-2 form input{
     margin: 1% 0%;
 }
 
-main section.seccion-2 form div.iconos{
+
+
+
+
+.link-login, .link-login a{
+    margin: 0px;
     font-size: 20px;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    line-height: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .botones{
     background-color: #4e69cb;
     border: #4e69cb;
-    height: 60px;
+    height: 50px;
     border-radius: 10px;
     align-self: center;
     color: white;
@@ -144,8 +172,30 @@ main section.seccion-2 form div.iconos{
     justify-content: center;
     padding: 0% 2%;
     align-items: center;
-    font-size: 25px;
+    font-size: 20px;
+    margin: 4px;
 }
+
+/* Botones fb y google */
+.botones2{
+    background-color: #4e69cb;
+    border: #4e69cb;
+    height: 45px;
+    border-radius: 10px;
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 3% 1%;
+    align-items: center;
+    font-size: 20px;
+    margin: 4px;
+}
+main .fa-brands{
+    padding-right: 2%;
+}
+/* Botones fb y google */
 
 /*Main*/
 
@@ -211,7 +261,24 @@ div.copyright p{
 
 /*Media query*/
 
-@media (min-width:1280px){
+
+
+@media (min-width:768px){
+
+    .message-register, .message-register ul li a{
+        display: inline;
+        height: fit-content;
+        padding-left: 12%;
+        padding-right: 12%;
+        padding-top: 12%;
+    }
+    main section.seccion-1{
+        display: flex;
+        flex-direction: column;
+        background-color: #4e69cb;
+        width: 100%;
+        
+    }
     .logo{
         color: black;
     }
@@ -253,18 +320,20 @@ div.copyright p{
         align-items: center;
     }
     /*Header*/
+
     /*Main*/
+    
     main{
         flex-direction: row;
         background-color: #ededed;
-        margin: 2% 0%;
-        padding: 2%;
+        margin: 0%;
         justify-content: space-between
     }
 
     main section.seccion-1{
-        width: 40%;
+        width: 50%;
         padding-left: 2%;
+        background-color: #4e69cb;
     }
 
     main section.seccion-2{
@@ -275,13 +344,15 @@ div.copyright p{
         display: flex;
         align-items: center;
     }
-    main section.seccion-2 form div.iconos{
-        font-size: 25px;
+    .titulo {
+        font-size: 40px;
+        padding-bottom: 15px;
     }
     
-    main section div.boton{
-        width: 60%;
-    }
+    main section div.boton {
+        width: 50%;
+        margin: 4px;
+      }
     /*Main*/
     /*Footer*/
 
