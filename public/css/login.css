@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     margin: 0px;
     font-family: 'Abel', sans-serif;
@@ -8,7 +12,7 @@ ul{
     padding: 0px;
 }
 
-li{
+header li, footer li{
     list-style-type: none;
     padding: 10px;
 }
@@ -19,15 +23,18 @@ li a, header nav a{
     font-size: 25px;
 }
 
-p{
-    margin: 0px;
+
+
+p {
+    margin: 1%;
     font-size: 25px;
+    text-align: center;
 }
 
 /*Header*/
 header{
     background-color: #D7D7D7;
-    margin: 0px;
+    margin: 0;
 }
 
 
@@ -88,36 +95,114 @@ header article form button{
     margin: 0px;
     padding-left: 5px;
 }
+/*Header*/
 
+/*Main*/
 
-.login-container{
-    width: 1200px;
+main{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    margin: 5%;
 
 }
 
-.login-col{
-
-    width: 50%;
-
+main section.seccion-1{
+    display: none;
 }
 
-.b-blue{
-    background-color: #2346C2;
-    width: 50%;
-
-}
-
-.message-login{
+.message-login {
     color: white;
-    font-size: 48px;
+    font-size: 60px;
+    padding-top: 50px;
+
 }
 
-.email{
+main section h2 {
+    margin: 1%;
+    font-size: 40px;
+    text-align: center;
     
 }
 
+main section.seccion-2 form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    line-height: 50px;
+    align-items: center;
+}
+
+main section.seccion-2 form input, main section.seccion-2 form select{
+    display: flex;
+    width: 80%;
+    background-color: #d9d9d9;
+    border: 1px #d9d9d9;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 2%;
+    margin: 1% 0%;
+}
+
+
+
+
+
+.link-login, .link-login a{
+    margin: 0px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    line-height: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.botones{
+    background-color: #4e69cb;
+    border: #4e69cb;
+    height: 50px;
+    border-radius: 10px;
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 0% 2%;
+    align-items: center;
+    font-size: 20px;
+    margin: 4px;
+}
+
+.remember{
+    color: grey;
+    
+}
+/* Botones fb y google */
+.botones2{
+    background-color: #4e69cb;
+    border: #4e69cb;
+    height: 45px;
+    border-radius: 10px;
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 3% 1%;
+    align-items: center;
+    font-size: 15px;
+    margin: 4px;
+}
+main .fa-brands{
+    padding-right: 2%;
+}
+/* Botones fb y google */
+
+/*Main*/
+
+/*Footer*/
 footer{
     background-color: #d9d9d9;
     padding: 15px;
@@ -170,13 +255,32 @@ div.copyright p{
     font-size: 20px;
 }
 
+/*Footer*/
+
 .vista-desktop{
     display: none;
 }
 
+
 /*Media query*/
 
-@media (min-width:1280px){
+
+
+@media (min-width:768px){
+
+    .message-login{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20%;
+    }
+    main section.seccion-1{
+        display: flex;
+        flex-direction: column;
+        background-color: #4e69cb;
+        width: 100%;
+        
+    }
     .logo{
         color: black;
     }
@@ -218,113 +322,36 @@ div.copyright p{
         align-items: center;
     }
     /*Header*/
+
     /*Main*/
-    .imagen{
+    
+    main{
+        flex-direction: row;
+        background-color: #ededed;
+        margin: 0%;
+        justify-content: space-between
+    }
+
+    main section.seccion-1{
         width: 50%;
+        padding-left: 2%;
+        background-color: #4e69cb;
+    }
+
+    main section.seccion-2{
+        background-color: white;
+        width: 50%;
+        padding: 2%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
     }
     
-    main section{
-        display: flex;
-    }
-
-    main section article.primera-parte{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 0% 2%;
-
-    }
-
-    main section article a.botones{
-        display: flex;
-        background-color: #4e69cb;
-        border: #4e69cb;
-        width: 40%;
-        height: 60px;
-        border-radius: 10px;
-        align-self: center;
-        color: white;
-        text-decoration: none;
-        justify-content: center;
-        padding: 0% 2%;
-        align-items: center; 
-    }
-
-    main section article div.titulo-texto{
-        height: 40%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-self: flex-start;
-    }
-
-    main section.section-modulos {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    main section article.contenedor-modulos{
-        width: 60%;
-    }
-
-    main section article.contenedor-modulos-modalidad{
-        width: 40%;
-    }
-
-    main section article div.contenedor-divs-deseados-boton{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    main section article div div.deseados-boton{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    main section article.contenedor-modulos-modalidad{
-        background-color: #ffff;
-        border-radius: 10px;
-        padding: 2% 0%;
-    }
-    main section article.contenedor-modulos-modalidad li.plan{
-        background-color: unset;
-    }
-
-    main section article div{
-        display: flex;
-        flex-direction: column;
-    }
-
-    main section article li.plan{
-        display: flex;
-        background-color: #d9d9d9;
-        border-radius: 10px;
-        align-items: flex-start;
-        margin: 2% 5%;
-    }
-
-    main section article li.plan span p.p-plan{
-        font-weight: bold;
-    }
-
-    main section article div.div-descargar-programa{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        align-self: center;
-    }
-    main section article div.div-descargar-programa a{
-        width: 80%
-    }
+    
+    main section div.boton {
+        width: 50%;
+        margin: 4px;
+      }
     /*Main*/
     /*Footer*/
 

@@ -89,14 +89,14 @@ header article form button{
 }
 /*main*/
 main section img.imagen{
-    width: 50%;
+    width: 80%;
+    margin-left: 35px;
+    margin-top: 15px;
+    
 
 }
 
-.imagen-home{
-    display: flex;
-    flex-direction: row;
-}
+
 
 /* footer */
 
