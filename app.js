@@ -20,6 +20,10 @@ app.get('/login', (req,res) => {
     res.sendFile(__dirname + '/views/login.html')
 });
 
+app.get('/register', (req,res) => {
+    res.sendFile(__dirname + '/views/register.html')
+});
+
 app.get('/carrito-de-compras', (req,res) => {
     res.sendFile(__dirname + '/views/carrito-de-compras.html')
 });
