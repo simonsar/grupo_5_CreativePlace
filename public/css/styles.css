@@ -88,13 +88,69 @@ header article form button{
     padding-left: 5px;
 }
 /*main*/
+
+main {
+    box-sizing: border-box;
+}
+
+.first-section {
+    background-color: #EDEDED;
+    margin-top: 30px;
+}
+
 main section img.imagen{
-    width: 80%;
-    margin-left: 35px;
-    margin-top: 15px;
+    width: 85%;
+    display: block;
+    margin: auto;
     
+}
+.welcome-title{
+    font-size: 25px;
+    text-align: center;
+}
+
+.welcome-message{
+    font-size: 20px; 
+    text-align: center;
+}
+
+.botones2{
+    background-color: #4e69cb;
+    border: #4e69cb;
+    height: 45px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 3% 1%;
+    font-size: 15px;
 
 }
+
+.second-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #EDEDED;
+    display: flex;
+    flex-direction: column;
+       
+}
+    
+
+
+main section a {
+    border: 1px solid #4e69cb;
+    padding: 10px;
+    background-color: #4e69cb;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    display: block ;
+    margin: 15px 30px 15px 30px;
+    text-align: center;
+    font-size: 20px
+    
+}
+
 
 
 

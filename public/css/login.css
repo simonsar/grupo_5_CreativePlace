@@ -177,7 +177,7 @@ main section.seccion-2 form input, main section.seccion-2 form select{
 
 .remember{
     color: grey;
-    
+    display: flex;
 }
 /* Botones fb y google */
 .botones2{
