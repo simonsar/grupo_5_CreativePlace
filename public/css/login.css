@@ -5,6 +5,7 @@
 body{
     margin: 0px;
     font-family: 'Abel', sans-serif;
+    
 
 }
 
@@ -103,7 +104,7 @@ main{
     display: flex;
     flex-direction: column;
     margin: 5%;
-
+    line-height: 150px;
 }
 
 main section.seccion-1{
@@ -121,7 +122,6 @@ main section h2 {
     margin: 1%;
     font-size: 40px;
     text-align: center;
-    
 }
 
 main section.seccion-2 form{
@@ -345,6 +345,14 @@ div.copyright p{
         flex-direction: column;
         display: flex;
         align-items: center;
+    }
+
+    main section h2 {
+        margin: 1%;
+        font-size: 40px;
+        text-align: center;
+       display: none;
+        
     }
     
     
