@@ -1,0 +1,267 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    font-family: 'Abel', sans-serif;
+
+}
+
+ul{
+    padding: 0px;
+}
+
+li{
+    list-style-type: none;
+    padding: 10px;
+}
+
+li a, header nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+p{
+    margin: 0px;
+    font-size: 25px;
+}
+
+/*Header*/
+header{
+    background-color: #D7D7D7;
+    margin: 0;
+}
+
+
+header article div.links{
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 80px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    width: 240px;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+header article input{
+    display: none;
+}
+
+header article input:checked ~ div.links{
+    display: flex;
+}
+
+header article label{
+    display: flex;
+    color: black;
+    font-size: 25px;
+    padding: 10px;
+}
+
+header article form button{
+    background-color: #4e69cb;
+    border: #4e69cb;
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    align-self: center;
+    color: white;
+}
+
+.logo-bars{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    color: #4e69cb;
+    font-family: 'Chivo Mono';
+    margin: 0px;
+    padding-left: 5px;
+}
+/*Header*/
+
+/*Main*/
+
+
+/*Main*/
+
+/*Footer*/
+footer{
+    background-color: #d9d9d9;
+    padding: 15px;
+}
+
+footer p{
+    margin: 0px;
+    position: relative;
+}
+
+footer section article div.iconos-footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+footer section article div.iconos-footer i{
+    padding: 5px;
+    font-size: 30px;
+}
+
+footer section article.iconos-links{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer section article div.links-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer section article div.contacto{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left:10px;
+}
+
+
+footer section div.copyright{
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+div.copyright p{
+    font-size: 20px;
+}
+
+/*Footer*/
+
+.vista-desktop{
+    display: none;
+}
+
+
+/*Media query*/
+
+@media (min-width:1280px){
+    .logo{
+        color: black;
+    }
+
+    .vista-desktop{
+        display: flex;
+    }
+    /*Header*/
+    header article label{
+        display: none;
+    }
+    header nav.vista-desktop a{
+        padding: 10px;
+    }
+    header form.vista-desktop{
+        background-color: white;
+        height: 25px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    header form.vista-desktop input{
+        border: #ffff;
+        border-radius: 10px;
+        width: 70%;
+    }
+    header a.vista-desktop{
+        background-color: #4e69cb;
+        border: #4e69cb;
+        height: 40px;
+        border-radius: 10px;
+        align-self: center;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        padding: 0% 2%;
+        align-items: center;
+    }
+    /*Header*/
+  
+    /*Main*/
+    /*Footer*/
+
+    footer{
+        display: flex;
+        position: relative;
+    }
+
+    footer section.mobile-footer{
+        display: none;
+    }
+
+    footer section.vista-desktop{
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    footer section.vista-desktop article.logo-iconos-desktop{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    footer section.vista-desktop article.logo-iconos-desktop div.iconos-footer-desktop{
+        padding: 0px;
+        font-size: 20px;
+    } 
+
+    footer section.vista-desktop div.contacto-desktop{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+
+    footer section.vista-desktop div.contacto-desktop div{
+        display: flex;
+
+    }
+
+    footer section.vista-desktop div.contacto-desktop div span p{
+        padding-left: 5px;
+    }
+
+    footer section.vista-desktop div.contacto-desktop li.comunidad{
+        padding: 0px;
+    }
+
+    footer div.copyright-desktop{
+        display: flex;
+        align-self: flex-end;
+        justify-content: flex-end;
+        position: absolute;
+        bottom: 2px;
+        right: 10px;
+    }
+    
+    footer section.vista-desktop ul{
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+    }
+    /*Footer*/
+}
