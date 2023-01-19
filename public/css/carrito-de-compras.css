@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
 }
 
@@ -57,13 +57,9 @@ header article input:checked ~ div.links{
 }
 
 header article label{
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     color: black;
     font-size: 25px;
-    height: 30px;
-    width: 30px;
     padding: 10px;
 }
 
@@ -102,22 +98,22 @@ main{
     margin: 5%;
 }
 
-main section.seccion-1{
+main article.seccion-1{
     display: flex;
     flex-direction: column;
 }
 
-main section.seccion-1 img {
+main article.seccion-1 img {
     width: 100%;
 }
 
-main section.seccion-2 form{
+main article.seccion-2 form{
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-main section.seccion-2 form input{
+main form input, main input#descuento{
     display: flex;
     width: 100%;
     background-color: #d9d9d9;
@@ -128,7 +124,7 @@ main section.seccion-2 form input{
     margin: 1% 0%;
 }
 
-main section.seccion-2 form div.iconos{
+main article.seccion-2 form div.iconos{
     font-size: 20px;
 }
 
@@ -145,6 +141,7 @@ main section.seccion-2 form div.iconos{
     padding: 0% 2%;
     align-items: center;
     font-size: 25px;
+    width: 100%;
 }
 
 /*Main*/
@@ -255,19 +252,30 @@ div.copyright p{
     /*Header*/
     /*Main*/
     main{
+        flex-direction: column;
+        margin: 2% 0%;
+    }
+
+    main h2 {
+        margin-left: 2%;
+        font-weight: 900;
+        color: #4e69cb;
+    }
+
+    main section {
+        display: flex;
         flex-direction: row;
         background-color: #ededed;
-        margin: 2% 0%;
         padding: 2%;
         justify-content: space-between
     }
-
-    main section.seccion-1{
+    
+    main article.seccion-1{
         width: 40%;
         padding-left: 2%;
     }
 
-    main section.seccion-2{
+    main article.seccion-2{
         background-color: white;
         width: 50%;
         padding: 2%;
@@ -275,12 +283,17 @@ div.copyright p{
         display: flex;
         align-items: center;
     }
-    main section.seccion-2 form div.iconos{
+    main article.seccion-2 form div.iconos{
         font-size: 25px;
     }
     
-    main section div.boton{
+    main article form div.boton{
         width: 60%;
+        align-self: center;
+    }
+
+    main input#descuento{
+        margin-top: 2%;
     }
     /*Main*/
     /*Footer*/

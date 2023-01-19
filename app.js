@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const mainRoutes = require('./src/routes/mainRouter');
 
 
 app.use(express.static('public'));
@@ -8,22 +9,15 @@ app.listen(process.env.PORT || 3000, function(){
     console.log("Servidor corriendo");
 });
 
-app.get("/", (req, res) => {
-    res.sendFile(__dirname + '/views/home.html')
-});
+app.use("/", mainRoutes);
 
-app.get("/detalle-de-producto", (req, res) => {
-    res.sendFile(__dirname + '/views/detalle-de-producto.html')
-});
+app.use("/detalle-de-producto", mainRoutes);
 
-app.get('/login', (req,res) => {
-    res.sendFile(__dirname + '/views/login.html')
-});
+app.use('/login', mainRoutes);
 
-app.get('/register', (req,res) => {
-    res.sendFile(__dirname + '/views/register.html')
-});
 
-app.get('/carrito-de-compras', (req,res) => {
-    res.sendFile(__dirname + '/views/carrito-de-compras.html')
-});
+app.use('/register', mainRoutes);
+
+app.use('/carrito-de-compras', mainRoutes);
+
+app.set('view engine', 'ejs');
