@@ -13,8 +13,10 @@ const controller = {
     },
     carrito: (req, res) => {
         return res.render('carrito-de-compras')
-    }
-
+    },
+    edit: (req, res) => {
+        return res.render('load-edit-product')
+    }    
 }
 
 module.exports = controller;

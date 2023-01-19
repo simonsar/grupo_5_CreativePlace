@@ -8,12 +8,14 @@ const mainController = require('../controllers/mainController')
 
 router.get('/', mainController.index);
 
-router.get('/', mainController.login);
+router.get('/login', mainController.login);
 
-router.get('/', mainController.register);
+router.get('/register', mainController.register);
 
-router.get('/', mainController.detalle);
+router.get('/detalle', mainController.detalle);
 
-router.get('/', mainController.carrito);
+router.get('/carrito', mainController.carrito);
+
+router.get('/editar', mainController.edit);
 
 module.exports = router;
