@@ -3,10 +3,10 @@ const controller = {
         return res.render('home')
     },
     register: (req, res) => {
-        return res.render('login')
+        return res.render('register')
     },
     login: (req, res) => {
-        return res.render('register')
+        return res.render('login')
     },
     detalle: (req, res) => {
         return res.render('detalle-de-producto')
