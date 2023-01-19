@@ -151,6 +151,26 @@ main section a {
     
 }
 
+@media(min-width:1024px){
+    main {
+        flex-direction: row;
+        background-color: #ededed;
+        margin: 2% 0%;
+        padding: 2%;
+        justify-content: space-between
+    }
+
+
+    .first-section{
+        display: flex;
+    }    
+
+    .imagen {
+        flex-grow: 0.30;
+    }
+
+}
+
 
 
 
