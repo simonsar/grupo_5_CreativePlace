@@ -54,9 +54,11 @@
             <img src="img" alt="img" class="imagen">
             <form action="">
                 <input type="text" placeholder="Nombre del producto">
-                <input type="text"> 
-                <input type="text">
-                <input type="text">
+                <br>
+                <textarea id="text" name="text" rows="8" cols="40" placeholder="Descripción"></textarea>
+                <br/>
+                <input type="text" placeholder="Categoría">
+                <input type="number"><span>$</span>
 
             </form>
         </section>
@@ -65,7 +67,7 @@
             <form action="">
                 <label for="text">Modulo 1</label>
                 <br>
-                <textarea id="text" name="text" rows="12" cols="50"></textarea>
+                <textarea id="text" name="text" rows="8" cols="40" placeholder="Descripción"></textarea>
                 <br/>
               </form>
             
@@ -73,8 +75,26 @@
 
             <article>
                 <form action="">
-                    
+                    <h2>Modalidad</h2>
+                    <label for="duracion">Duración </label>
+                    <input type="number" name="duracion"><span> Meses</span>
+
+                    <label for="tiempo requerido">Dedicación semanal </label>
+                    <input type="number" name="tiempo requerido"><span> Horas</span>
+
+                    <label for="proximo inicio">Próximo inicio de curso </label>
+                    <input type="date" name="proximo inicio"> <!--Esto esta mal, necesito de esta fecha a otra(lapso de tiempo)-->
+
+                    <label for="turnos">Turnos </label>
+                    <select name="turnos" >
+                        <option value="" disabled selected>Selecciona el turno</option>
+                        <option value="Mañana">Mañana</option>
+                        <option value="Tarde">Tarde</option>
+                        <option value="Noche">Noche</option>
+                      </select>
                 </form>
+
+                <button>Subir curso</button>
             </article>
 
         </section>
