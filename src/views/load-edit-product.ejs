@@ -32,29 +32,49 @@
             
             <button>Agregar</button>
 
-            <article>
-                <form action="">
-                    <h2>Modalidad</h2>
-                    <label for="duracion">Duración </label>
-                    <input type="number" name="duracion"><span> Meses</span>
-
-                    <label for="tiempo requerido">Dedicación semanal </label>
-                    <input type="number" name="tiempo requerido"><span> Horas</span>
-
-                    <label for="proximo inicio">Próximo inicio de curso </label>
-                    <input type="date" name="proximo inicio"> <!--Esto esta mal, necesito de esta fecha a otra(lapso de tiempo)-->
-
-                    <label for="turnos">Turnos </label>
-                    <select name="turnos" >
-                        <option value="" disabled selected>Selecciona el turno</option>
-                        <option value="Mañana">Mañana</option>
-                        <option value="Tarde">Tarde</option>
-                        <option value="Noche">Noche</option>
-                      </select>
-                </form>
-
-                <button>Subir curso</button>
-            </article>
+            <article class="contenedor-modulos-modalidad">
+                <h2>Modalidad</h2>
+                <ul>
+                <li class="plan">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span class="simbolos-p">
+                        <p class="p-plan">Duración</p>
+                        <input type="number"> <span> Meses</span>
+                    </span>
+                </li>
+                <li class="plan">
+                    <i class="fa-solid fa-laptop"></i>
+                    <span class="simbolos-p">
+                        <p class="p-plan">Dedicación semanal</p>
+                        <input type="number"> <span> Horas</span>
+                    </span>
+                </li>
+                <li class="plan">
+                    <i class="far fa-file"></i></i>
+                    <span class="simbolos-p">
+                        <p class="p-plan">Fechas</p>
+                        <input type="date">
+                    </span>
+                </li>
+                <li class="plan">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="simbolos-p">
+                        <p class="p-plan">Turnos</p>
+                        <select name="Turnos" id="">
+                            <option value="" disabled selected> Selecciona el turno elegido </option>
+                            <option value="Mañana">Mañana</option>
+                            <option value="Tarde">Tarde</option>
+                            <option value="Noche">Noche</option>
+                        </select>
+                        
+                    </span>
+                </li>
+                </ul>
+                <div class="div-descargar-programa">
+                    <a href="#" class="vista-desktop botones">Subir nuevo programa</a>
+        
+                </div>
+                </article>
 
         </section>
 
