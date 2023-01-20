@@ -425,6 +425,9 @@ div.copyright p{
     main section article div.div-descargar-programa a{
         width: 80%
     }
+    main section article div h3.precio{
+        display: flex;
+    }
     /*Main*/
     /*Footer*/
 
