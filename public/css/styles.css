@@ -23,6 +23,11 @@ li a, header nav a{
     display: none;
 }
 
+p{
+    margin: 0px;
+    font-size: 25px;
+}
+
 /*Header*/
 header{
     background-color: #D7D7D7;
