@@ -124,10 +124,13 @@ main section form input, main section form textarea {
 main section article.contenedor-modulos h2, main section article.contenedor-modulos-modalidad h2{
     display: flex;
     justify-content: center;
+    
 }
 
 .imagen{
-    width: 100%;
+    width: 90%;
+    display: block;
+    margin: auto
 }
 
 main section article div.titulo-texto{
@@ -148,17 +151,17 @@ main section article div.deseados{
 .botones{
     background-color: #D9D9D9;
     border: #D9D9D9;
-    width: 40%;
-    height: 60px;
+    width: 30%;
+    height: 40px;
     border-radius: 10px;
     align-self: center;
     color: black;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
-    padding: 0% 2%;
+    padding: 10px;
     align-items: center;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 
