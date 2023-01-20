@@ -92,6 +92,133 @@ header article form button{
 
 /*Main*/
 
+main{
+    margin: 2% 0%;
+    background-color: #EDEDED;
+    padding: 2%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+main section form input, main section form textarea {
+    background-color: #D9D9D9;
+    border: 5px #d9d9d9;
+    border-radius: 10px;
+    padding: 2%;
+    width: 100%;
+    margin-top:  2%;
+    font-size: 16px;
+}
+
+.categoria-precios{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.categoria-precios input{
+    margin: 2%;
+}
+
+main section article.contenedor-modulos h2, main section article.contenedor-modulos-modalidad h2{
+    display: flex;
+    justify-content: center;
+}
+
+.imagen{
+    width: 100%;
+}
+
+main section article div.titulo-texto{
+    padding-top: 15px;
+}
+
+main section article div.contenedor-divs-deseados-boton{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+main section article div.deseados{
+    display: flex;
+    justify-content: center;
+}
+
+.botones{
+    background-color: #D9D9D9;
+    border: #D9D9D9;
+    width: 40%;
+    height: 60px;
+    border-radius: 10px;
+    align-self: center;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 2%;
+    align-items: center;
+    font-size: 25px;
+}
+
+
+main section article form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.plan-estudios{
+    display: flex;
+    align-self: center;
+}
+
+main section.section-modulos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+main section article.contenedor-modulos, main section article.contenedor-modulos-modalidad{
+    width: 100%;
+}
+
+main section article div.modulos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #d9d9d9;
+    height: 75px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2% 5%;
+    padding: 0% 5%;
+}
+
+main section article li.plan{
+    display: flex;
+    background-color: #d9d9d9;
+    height: 75px;
+    border-radius: 10px;
+    align-items: center;
+    margin: 2% 5%;
+}
+
+main section article li span.simbolos-p{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0% 2%;
+}
+
+main section article li.plan i{
+    font-size: 25px;
+}
 
 /*Main*/
 

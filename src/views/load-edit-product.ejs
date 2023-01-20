@@ -7,18 +7,19 @@
 <body>
     <%- include('./partials/header')%>
 <!--MAIN START-->
-
     <main>
         <section class="section-1">
-            <img src="img" alt="img" class="imagen">
+            <img src="/img/upload img.jpg" alt="img" class="imagen">
             <form action="">
                 <input type="text" placeholder="Nombre del producto">
                 <br>
                 <textarea id="text" name="text" rows="8" cols="40" placeholder="Descripción"></textarea>
                 <br/>
-                <input type="text" placeholder="Categoría">
-                <input type="number"><span>$</span>
-
+                <div class="categoria-precios"> 
+                    <input type="text" placeholder="Categoría">
+                    <input type="number" placeholder="Precios">
+                </div>
+                
             </form>
         </section>
 
@@ -29,8 +30,7 @@
                 <textarea id="text" name="text" rows="8" cols="40" placeholder="Descripción"></textarea>
                 <br/>
               </form>
-            
-            <button>Agregar</button>
+            <button class="botones">Agregar <p>+</p></button>
 
             <article class="contenedor-modulos-modalidad">
                 <h2>Modalidad</h2>
@@ -75,13 +75,9 @@
         
                 </div>
                 </article>
-
         </section>
-
-
     </main>
 <!--MAIN ENDS-->
-
     <%- include('./partials/footer')%>
 </body>
 </html>
