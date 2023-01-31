@@ -1,0 +1,11 @@
+{
+    "marketing": {
+                    "nombre": "Marketing Digital",
+                    "precio": 35000,
+                    "descripcion": "En este curso aprenderás cómo manejar",
+                    "modulos": 5,
+                    "fechaInicio": "03/06/2023",
+                    "fechaFinalizacion": "3/09/2023",
+                    "imagen": "imagen.img"
+                }
+}
