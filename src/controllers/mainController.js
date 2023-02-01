@@ -1,6 +1,12 @@
+const path = require('path');
+const fs = require('fs');
+
+const jsonProductos = path.join(__dirname, '../database/products.json')
+let productos = JSON.parse(fs.readFileSync(jsonProductos));
+
 const controller = {
     index: (req, res) => {
-        return res.render('home')
+        return res.render('home', {productos: productos})
     },
     register: (req, res) => {
         return res.render('register')
@@ -9,7 +15,9 @@ const controller = {
         return res.render('login')
     },
     detalle: (req, res) => {
-        return res.render('detalle-de-producto')
+        let producto = productos.find((curso) => req.params.id == curso.id );
+        console.log(producto);
+        return res.render('detalle-de-producto', {producto: producto});
     },
     carrito: (req, res) => {
         return res.render('carrito-de-compras')

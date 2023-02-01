@@ -21,11 +21,13 @@
             </article>               
                 </section>  
         <section class="second-section">
-            <a href="#">
-                Marketing Digital
-            </a>
+            <% for( let i = 0; i < productos.length; i++ ) { %>
+                <a href="/detalle/<%= productos[i].id %> ">
+                    <%= productos[i].nombre %> 
+                </a>
+            <% } %>
 
-            <a href="#">
+            <!--<a href="#">
                 Inglés para Programadores
             </a>
 
@@ -43,7 +45,7 @@
 
             <a href="#">
                 Cyber Security
-            </a>
+            </a>-->
         </section>
 
         <section></section>

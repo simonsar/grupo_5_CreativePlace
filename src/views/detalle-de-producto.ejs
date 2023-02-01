@@ -5,14 +5,14 @@
     
     <main>
         <section>
-            <img src="img/pexels-img2.jpg" alt="img" class="imagen">
+            <img src="/img/pexels-img2.jpg" alt="img" class="imagen">
             <article class="primera-parte">
                 <div class="titulo-texto">
                     <h2 class="titulo-curso">
-                        Full Stack developer.
+                        <%= producto.nombre %> 
                     </h2>
-                    <p>En este curso aprenderás todo lo necesario para ser un full stack developer, saldrás con todos los conocimientos necesarios de front-end y back-end para iniciarte en el mundo de la programación.</p>
-                    <h3 class="precio">$15.000</h3>
+                    <p><%= producto.descripcion %></p>
+                    <h3 class="precio">$<%= producto.precio %></h3>
                 </div>
                 <div class="contenedor-divs-deseados-boton">
                     <div class="deseados">

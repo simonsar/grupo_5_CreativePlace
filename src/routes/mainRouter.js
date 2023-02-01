@@ -12,7 +12,7 @@ router.get('/login', mainController.login);
 
 router.get('/register', mainController.register);
 
-router.get('/detalle', mainController.detalle);
+router.get('/detalle/:id', mainController.detalle);
 
 router.get('/carrito', mainController.carrito);
 
