@@ -16,6 +16,18 @@ router.get('/detalle/:id', mainController.detalle);
 
 router.get('/carrito', mainController.carrito);
 
-router.get('/editar', mainController.edit);
+router.get('/editar', mainController.edit); //Edicion de productos
+
+
+//Sprint 4
+
+router.get('/products', mainController.products); //Listado productos
+
+router.get('/search', mainController.search);
+
+router.get('/products/create', mainController.create); //Form creacion productos
+
+router.post('/products/create', mainController.createProcess); //Accion de creacion (donde se envia form)
+
 
 module.exports = router;
