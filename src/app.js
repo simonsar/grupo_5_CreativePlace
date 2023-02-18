@@ -30,3 +30,5 @@ app.use('/editar', mainRoutes);
 
 app.use('/products', mainRoutes);
 
+app.use('/products/create', mainRoutes);
+

@@ -1,11 +1,11 @@
-<%-include(".partials/head", {link: "", titulo: "Lista de productos"}) %>
+<%-include("./partials/head", {link: "", titulo: "Lista de productos"}) %>
     <body>
         <%- include('partials/header.ejs') %>
         <h1>Product List</h1>
         <ul>
-            <% for (let i = 0; i < products.length; i++) { %>
+            <% for (let i = 0; i < productos.length; i++) { %>
                 <li>
-                    <a href="/detalle/<%=products[i].id%>"><%= products[i].nombre %></a>
+                    <a href="/detalle/<%=productos[i].id%>"><%= productos[i].nombre %></a>
                 </li>
             <% } %>
         </ul>
