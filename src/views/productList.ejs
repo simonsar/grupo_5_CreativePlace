@@ -1,11 +1,17 @@
-<%-include("./partials/head", {link: "/css/productList.css", titulo: "Lista de productos"}) %>
+<%-include("./partials/head", {link: "/css/productList.css", titulo: "Listado de productos"}) %>
 <link rel="stylesheet" href="/css/productList.css">
-<title>Lista de productos</title>
+<title>Listado de productos</title>
     
 </head>
 <body>
-        <%- include('partials/header.ejs') %>
-        <h1>Product List</h1>
+    <%- include('partials/header.ejs') %>
+    <main>
+        <section class="contenedor-lista">
+        <h1>Listado de productos</h1>
+        <form action="/products/search" method="GET">
+            <input type="text" placeholder="Busca un producto" name="search">
+            <input class="boton-buscar" type="submit" value="Buscar">
+        </form>
         <ul>
             <% for (let i = 0; i < productos.length; i++) { %>
                 <li>
@@ -13,10 +19,9 @@
                 </li>
             <% } %>
         </ul>
-        <h2>Search</h2>
-        <form action="/products/search" method="GET">
-            <input type="text" name="search">
-            <input type="submit" value="search">
-        </form>
-    </body>
+    </section>
+    </main>
+    <!--MAIN ENDS-->
+    <%- include('./partials/footer')%>
+</body>
 </html>

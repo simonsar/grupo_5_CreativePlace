@@ -92,7 +92,34 @@ header article form button{
 
 /*Main*/
 
+* {
+    box-sizing: border-box;
+    
+}
+main {
+height: 90%;
+background-color: white;
+}
 
+.contenedor-lista {
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+width: 90vw;
+flex-direction: column;
+text-align: center;
+}
+
+.boton-buscar {
+    background-color:#d7d7d7;
+    border: 1px solid #d7d7d7;
+    border-radius: 10%;
+    color: black;
+    justify-content: center;
+    margin: auto;
+    cursor: pointer;
+}
 
 /*Main*/
 
@@ -207,8 +234,7 @@ div.copyright p{
   
     /*Main*/
 
-   
-
+    
 
 
 
