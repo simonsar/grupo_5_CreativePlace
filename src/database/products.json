@@ -15,7 +15,7 @@
   },
   {
     "id": 2,
-    "nombre": "inglés para Programadores",
+    "nombre": "Inglés para Programadores",
     "precio": 15000,
     "descripcion": "En este curso tendrás un intensivo de inglés para el ambiente de un programador, podrás entender a la perfección cada término y punto necesario para despegar tu carrera.",
     "modulos": 6,
@@ -29,7 +29,7 @@
   },
   {
     "id": 3,
-    "nombre": "Data Analitycs",
+    "nombre": "Data Analytics",
     "precio": 50000,
     "descripcion": "Aprenderás cómo extraer y usar datos para generar estadísticas, aprenderás también a interpretar los patrones significativos de los datos.",
     "modulos": 8,
@@ -57,7 +57,7 @@
   },
   {
     "id": 5,
-    "nombre": "Full Stack developer",
+    "nombre": "Full Stack Developer",
     "precio": 80000,
     "descripcion": "Al terminar este curso tendrás todos los conocimientos necesarios para crear una página web de pies a cabeza (literalmente)",
     "modulos": 9,
@@ -71,7 +71,7 @@
   },
   {
     "id": 6,
-    "nombre": "Cyber security",
+    "nombre": "Cybersecurity",
     "precio": 90000,
     "descripcion": "Al finalizar serás todo un experto en cyber seguridad, este título te abrirá muchas puertas por el internet (y cerrará las más peligrosas también c:).",
     "modulos": 12,

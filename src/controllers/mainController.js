@@ -52,14 +52,11 @@ const controller = {
     search: (req, res) => {
         let busqueda = req.query.search;
 
-        let archivoJSON = fs.readFileSync('producto.json', {encoding: 'utf-8'});
-        let products = JSON.parse(archivoJSON);
-
         let productResult = [];
 
-        for(let i = 0; i < products.length; i++) {
-            if (products[i].name.includes(busqueda)) {
-                productResult.push(products[i]);
+        for(let i = 0; i < productos.length; i++) {
+            if (productos[i].nombre.toUpperCase().includes(busqueda.toUpperCase())) {
+                productResult.push(productos[i]); 
             }
         }
         
