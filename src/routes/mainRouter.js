@@ -12,7 +12,7 @@ router.get('/detalle/:id', mainController.detalle);
 
 router.get('/carrito', mainController.carrito);
 
-router.get('/editar', mainController.edit); //Edicion de productos
+router.get('/edit', mainController.edit); //Edicion de productos
 
 
 //Sprint 4

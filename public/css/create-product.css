@@ -93,15 +93,16 @@ header article form button{
 /*Main*/
 
 main{
-    margin: 2% 0%;
+    margin-top: 3%;
     background-color: #EDEDED;
-    padding: 2%;
+    padding: 3%;
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
+    box-sizing: border-box;
 }
 
-main section form input, main section form textarea {
+main form section input, main form section textarea {
     background-color: #D9D9D9;
     border: 5px #d9d9d9;
     border-radius: 10px;
@@ -111,21 +112,59 @@ main section form input, main section form textarea {
     font-size: 16px;
 }
 
+.section-1 {
+    margin-bottom: 5%;
+}
+
 .categoria-precios{
     display: flex;
     flex-direction: row;
-
 }
 
-.categoria-precios input{
-    margin: 2%;
-}
-
-main section article.contenedor-modulos h2, main section article.contenedor-modulos-modalidad h2{
+.modulo {
+    background-color: #D9D9D9;
+    border: 5px #d9d9d9;
+    border-radius: 10px;
     display: flex;
-    justify-content: center;
-    
+    flex-direction: column;
+    margin-bottom: 20px;
 }
+
+.modalidad1 {
+    background-color: #D9D9D9;
+    border: 5px #d9d9d9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.subtitulo-main {
+    align-self: left;
+    font-size: 30px;
+    padding-left: 3%;
+    padding-top: 2%;
+}
+
+.descripcion {
+    background-color: white;
+    border: 5px white;
+    border-radius: 10px;
+    padding: 2%;
+    width: 90%;
+    height: 65px;
+    margin-top:  2%;
+    font-size: 16px;
+    align-self: center;
+    margin-bottom: 5%;
+}
+
+.modalidad {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .imagen{
     width: 90%;
@@ -133,22 +172,7 @@ main section article.contenedor-modulos h2, main section article.contenedor-modu
     margin: auto
 }
 
-main section article div.titulo-texto{
-    padding-top: 15px;
-}
-
-main section article div.contenedor-divs-deseados-boton{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-}
-
-main section article div.deseados{
-    display: flex;
-    justify-content: center;
-}
-
-.botones{
+.boton-agregar{
     background-color: #D9D9D9;
     border: #D9D9D9;
     width: 30%;
@@ -162,65 +186,23 @@ main section article div.deseados{
     padding: 10px;
     align-items: center;
     font-size: 20px;
+    cursor: pointer;
 }
 
-
-main section article form{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.plan-estudios{
-    display: flex;
+.boton-submit{
+    background-color: #D9D9D9;
+    border: #D9D9D9;
+    height: 40px;
+    border-radius: 10px;
     align-self: center;
-}
-
-main section.section-modulos{
+    color: black;
+    text-decoration: none;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
-}
-
-main section article.contenedor-modulos, main section article.contenedor-modulos-modalidad{
-    width: 100%;
-}
-
-main section article div.modulos{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: #d9d9d9;
-    height: 75px;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 2% 5%;
-    padding: 0% 5%;
-}
-
-main section article li.plan{
-    display: flex;
-    background-color: #d9d9d9;
-    height: 75px;
-    border-radius: 10px;
+    padding: 10px;
     align-items: center;
-    margin: 2% 5%;
-}
-
-main section article li span.simbolos-p{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0% 2%;
-}
-
-main section article li.plan i{
-    font-size: 25px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 /*Main*/
@@ -287,6 +269,72 @@ div.copyright p{
 
 /*Media query*/
 
+@media (min-width:768px){
+    .main {
+        margin: 0;
+        padding: 0;
+    }
+    .section-1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .imagen {
+        display: flex;
+        align-self: left;
+        width: 50vw;
+
+    }
+
+    .detalle-producto{
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .section-modulo {
+        width: 45%;
+        margin-left: 2%;
+        margin-right: 10%;
+    }
+    .section-modalidad {
+        width: 35%;
+        background-color: white;
+        border: 5px white;
+        border-radius: 10px;
+    }
+    .section-modalidad h2 {
+    text-align: center;
+    }
+    .descripcion {
+        background-color: #D7D7D7;
+        border: 5px #D7D7D7;
+    }
+
+    .modalidad1 {
+        background-color: white;
+        border: 5px white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .boton-submit {
+        background-color:#4e69cb;
+        border:#4e69cb;
+        color: white;
+        width: 250px;
+        height: 60px;
+        justify-content: center;
+        margin: auto;
+    }
+}
+
 @media (min-width:1280px){
     .logo{
         color: black;
@@ -330,6 +378,15 @@ div.copyright p{
     }
     /*Header*/
   
+    /*Main*/
+
+   
+
+
+
+
+
+
     /*Main*/
     /*Footer*/
 

@@ -82,18 +82,5 @@
     "fechaInicio": "2/05/2023",
     "fechaFinalizacion": "10/3/2024",
     "imagen": "imagen.img"
-  },
-  {
-    "id": 7,
-    "nombre": "",
-    "precio": "",
-    "descripcion": "",
-    "modulos": "",
-    "cronograma": {
-      "dias": "",
-      "horarios": ""
-    },
-    "fechaInicio": "2023-03-01",
-    "fechaFinalizacion": "2023-03-11"
   }
 ]
