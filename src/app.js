@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const mainRoutes = require('./routes/mainRoutes');
+const mainRouter = require('./routes/mainRouter');
+const loginRouter = require('./routes/loginRouter');
 
 const path = require('path')
 
@@ -16,19 +17,20 @@ app.listen(process.env.PORT || 3000, function(){
     console.log("Servidor corriendo");
 });
 
-app.use("/", mainRoutes);
+app.use("/", mainRouter);
 
-app.use("/detalle", mainRoutes);
+app.use("/detalle", mainRouter);
 
-app.use('/login', mainRoutes);
+app.use('/carrito', mainRouter);
 
-app.use('/register', loginRoutes);
+app.use('/editar', mainRouter);
 
-app.use('/carrito', mainRoutes);
+app.use('/products', mainRouter);
 
-app.use('/editar', mainRoutes);
+app.use('/products/create', mainRouter);
 
-app.use('/products', mainRoutes);
+// Sprint 5
 
-app.use('/products/create', mainRoutes);
+app.use('/login', loginRouter);
 
+app.use('/register', loginRouter);
