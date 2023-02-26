@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const mainRoutes = require('./routes/mainRouter');
+const mainRoutes = require('./routes/mainRoutes');
 
 const path = require('path')
 
@@ -22,7 +22,7 @@ app.use("/detalle", mainRoutes);
 
 app.use('/login', mainRoutes);
 
-app.use('/register', mainRoutes);
+app.use('/register', loginRoutes);
 
 app.use('/carrito', mainRoutes);
 

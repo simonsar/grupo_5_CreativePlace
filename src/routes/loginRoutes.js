@@ -3,12 +3,12 @@ const router = express.Router();
 
 const path = require('path')
 
-const usuariosController = require('../controllers/userLoginController');
+const userLoginController = require('../controllers/userLoginController');
 
-router.get('/login', usuariosController.login);
+router.get('/login', userLoginController.login);
 
-router.post('/login', usuariosController.loginProcess);
+router.post('/login', userLoginController.loginProcess);
 
-router.get('/register', usuariosController.register);
+router.get('/register', userLoginController.register);
 
-router.post('/register', usuariosController.registerProcess);
+module.exports = router;

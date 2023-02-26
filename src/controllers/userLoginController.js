@@ -6,14 +6,14 @@ let productos = JSON.parse(fs.readFileSync(usuariosJSON, 'utf-8'));
 
 const userController = {
     login: (req, res) => {
-        return res.render('login')
+        res.render('login')
     },
     loginProcess: (req, res) => {
         let usuarioingreso = req.body   
     },
     register: (req, res) => {
-        return res.render('register')
+        res.render('register.ejs')
     },
 };
 
-module.exports = userController;
+module.exports = userController;    
