@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const usuariosJSON = path.join(__dirname, '../database/users.json');
-let productos = JSON.parse(fs.readFileSync(usuariosJSON, 'utf-8'));
+let users = JSON.parse(fs.readFileSync(usuariosJSON, 'utf-8'));
 
 const userController = {
     login: (req, res) => {
@@ -12,7 +12,8 @@ const userController = {
         let usuarioingreso = req.body   
     },
     register: (req, res) => {
-        return res.render('register')
+        res.render('register.ejs')
+
     },
 };
 
