@@ -7,13 +7,7 @@ let productos = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
 const controller = {
     index: (req, res) => {
         return res.render('home', {productos: productos})
-    },
-    register: (req, res) => {
-        return res.render('register')
-    },
-    login: (req, res) => {
-        return res.render('login')
-    },
+    },                                                                              
     detalle: (req, res) => {
         let producto = productos.find((curso) => req.params.id == curso.id );
         console.log(producto);
@@ -28,52 +22,41 @@ const controller = {
     create: function(req, res) {
         res.render('create-product.ejs')
     },
-    
     products: (req, res) => {
-
         res.render('productList', {productos: productos});
     },
     createProcess: (req, res) => {
         let product = {
+            id: 7,
             nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            categoria: req.body.categoria,
             precio: req.body.precio,
-            descripcionmodulo: req.body.modulo,
-            duracion: req.body.duracion,
-            horasporsemana: req.body.dedicacion,
-            fecha: req.body.fecha,
-            turno: req.body.turno
-        }
+            descripcion: req.body.descripcion,
+            modulos: req.body.modulos,
+            cronograma:{
+                dias: req.body.dias,
+                horarios: req.body.horarios,
+            },
+            fechaInicio: req.body.fechaInicio,
+            fechaFinalizacion: req.body.fechaFinalizacion,
+            imagen: req.body.imagen,
+        };
+        productos.push(product);
+
+        fs.writeFileSync(productosJSON, JSON.stringify(productos, null, 2));
+
+        res.redirect('/products');
 
         //GUARDAR
-        let archivoProducto = fs.readFileSync('producto.json', {encoding: 'utf-8'});
-        let productosCreate;
-        if (archivoProducto == "") {
-            productosCreate = [];
-        } else {
-            productosCreate = JSON.parse(archivoProducto);
-        };
         
-        productosCreate.push(product);
-
-        productosJSON = JSON.stringify(productosCreate);
-        fs.writeFileSync('producto.json', productosJSON);
-
-        res.redirect('/products')
-
     },
     search: (req, res) => {
         let busqueda = req.query.search;
 
-        let archivoJSON = fs.readFileSync('producto.json', {encoding: 'utf-8'});
-        let products = JSON.parse(archivoJSON);
-
         let productResult = [];
 
-        for(let i = 0; i < products.length; i++) {
-            if (products[i].name.includes(busqueda)) {
-                productResult.push(products[i]);
+        for(let i = 0; i < productos.length; i++) {
+            if (productos[i].nombre.toUpperCase().includes(busqueda.toUpperCase())) {
+                productResult.push(productos[i]); 
             }
         }
         

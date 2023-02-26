@@ -1,7 +1,6 @@
-<%- include("./partials/head", {link :"/css/load-edit-product.css", titulo: "Crear producto"}) %>
-<link rel="stylesheet" href="/css/load-edit-product.css">
+<%- include("./partials/head", {link :"/css/create-product.css", titulo: "Crear producto"}) %>
+<link rel="stylesheet" href="/css/create-product.css">
 <title>Crear producto</title>
-<body>
     
 </head>
 <body>
@@ -9,71 +8,59 @@
 <!--MAIN START-->
     <main>
         <form method="POST" action="/products/create">
-        <section class="section-1">
-            <img src="/img/upload img.jpg" alt="img" class="imagen">
-                <input type="text" placeholder="Nombre del producto" name="nombre">
-                <br>
-                <textarea id="text" name="descripcion" rows="8" cols="40" placeholder="Descripción"></textarea>
-                <br/>
-                <div class="categoria-precios"> 
-                    <input type="text" name="categoria" placeholder="Categoría">
-                    <input type="number" name="precio" placeholder="Precio">
+            <section class="section-1">
+                <div class="imagen">
+                <img src="/img/upload img.jpg" alt="img" class="imagen">
                 </div>
-                
-            
-        </section>
+                <article class="detalle-producto">
+                    <input type="text" placeholder="Nombre del producto" name="nombre">
+                    
+                    <textarea id="text" name="descripcion" rows="8" cols="40" placeholder="Descripción"></textarea>
+                    
+                    <div class="categoria-precios"> 
+                        <input type="text" name="categoria" placeholder="Categoría">
+                        <input type="number" name="precio" placeholder="Precio">
+                    </div> 
+                </article>
+            </section>
 
-        <section>
-            
-                <label for="text">Modulo 1</label>
-                <br>
-                <textarea id="text" name="descripcionmodulo" rows="8" cols="40" placeholder="Descripción"></textarea>
-                <br/>
-              
-            <button class="botones">Agregar <p>+</p></button>
-
-            <article class="contenedor-modulos-modalidad">
+            <section class="section-modulo">
+                <article class="modulo">
+                    <p class="subtitulo-main">Módulo 1</p>
+                    <br>
+                    <textarea class="descripcion" id="text" name="modulos" rows="8" cols="40" placeholder="Descripción"></textarea>
+                    <br/>
+                </article>
+                <button type="button" class="boton-agregar">Agregar <p>+</p></button>
+            </section>
+            <section class="section-modalidad">
                 <h2>Modalidad</h2>
-                <ul>
-                <li class="plan">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    <span class="simbolos-p">
-                        <p class="p-plan">Duración</p>
-                        <input type="number" name="duracion"> <span> Meses</span>
-                    </span>
-                </li>
-                <li class="plan">
-                    <i class="fa-solid fa-laptop"></i>
-                    <span class="simbolos-p">
-                        <p class="p-plan">Dedicación semanal</p>
-                        <input type="number" name="horasporsemana"> <span>Horas</span>
-                    </span>
-                </li>
-                <li class="plan">
-                    <i class="far fa-file"></i></i>
-                    <span class="simbolos-p">
-                        <p class="p-plan">Fechas</p>
-                        <input type="date" name="fecha">
-                    </span>
-                </li>
-                <li class="plan">
-                    <i class="fa-regular fa-clock"></i>
-                    <span class="simbolos-p">
-                        <p class="p-plan">Turnos</p>
-                        <select name="turno" id="">
-                            <option value="" disabled selected> Selecciona el turno elegido </option>
-                            <option value="Mañana">Mañana</option>
-                            <option value="Tarde">Tarde</option>
-                            <option value="Noche">Noche</option>
-                        </select>
+                    <article class="modalidad1">
                         
-                    </span>
-                </li>
-                </ul>
-                <button type="submit">Subir nuevo programa</button>
-            </article>
-        </section>
-                </form>
+                            <p class="subtitulo-main"><i class="fa-solid fa-laptop"></i> Cronograma</p>
+                            <input class="descripcion" type="text" name="dias" placeholder="Días de clase">
+
+                            <input class="descripcion" type="text" name="horarios" placeholder="Horarios de clase">
+                    </article>
+                    <article class="modalidad1">
+                            <p class="subtitulo-main"><i class="fa-solid fa-calendar-days"></i> Fecha de inicio</p>
+                            <input class="descripcion" type="date" name="fechaInicio"> 
+
+                            <p class="subtitulo-main"><i class="fa-solid fa-calendar-days"></i> Fecha de finalización</p>
+                            <input class="descripcion" type="date" name="fechaFinalizacion">
+                    </article>
+                    <article class="modalidad1">
+                            <p class="subtitulo-main"><i class="fa-regular fa-clock"></i> Turnos</p>
+                            <select class="descripcion" name="turno" id="">
+                                <option value="" disabled selected>Selecciona el turno elegido</option>
+                                <option value="Mañana">Mañana</option>
+                                <option value="Tarde">Tarde</option>
+                                <option value="Noche">Noche</option>
+                            </select>
+                        </article>
+                    </section>
+                    <button class="boton-submit" type="submit">Subir nuevo programa</button>
+        </form>
     </main>
 <!--MAIN ENDS-->
     <%- include('./partials/footer')%>
