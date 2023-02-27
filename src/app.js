@@ -37,3 +37,8 @@ app.use('/', loginRouter);
 app.listen(process.env.PORT || 3000, function(){
     console.log("Servidor corriendo");
 });
+
+app.use((req, res, next) => {       //Este es el middleware que redirecciona a la vista de 404Nfound (funciona!)
+    res.status(404).render('404notFound');
+    next();
+})
