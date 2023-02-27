@@ -12,7 +12,7 @@ const userController = {
         let usuarioingreso = req.body   
     },
     register: (req, res) => {
-        res.render('register.ejs')
+        res.render('register')
 
     },
 };

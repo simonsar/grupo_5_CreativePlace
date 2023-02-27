@@ -13,10 +13,6 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static('public'));
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Servidor corriendo");
-});
-
 app.use("/", mainRouter);
 
 app.use("/detalle", mainRouter);
@@ -34,3 +30,10 @@ app.use('/products/create', mainRouter);
 app.use('/login', loginRouter);
 
 app.use('/register', loginRouter);
+
+
+
+
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Servidor corriendo");
+});
