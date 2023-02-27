@@ -15,6 +15,20 @@ const userController = {
         res.render('register')
 
     },
+    registerProcess: (req,res) =>{
+        let user = {
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            country: req.body.country,
+            email: req.body.email,
+            password: req.body.password
+        }
+        users.push(user);
+
+        fs.writeFileSync(usuariosJSON, JSON.stringify(users, null, 2));
+
+        res.redirect('/');
+    }//casi lo tengo, hay algo que falla, sospecho que me falta poner la ruta en el app.js
 };
 
 module.exports = userController;    

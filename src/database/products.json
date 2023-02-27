@@ -82,5 +82,18 @@
     "fechaInicio": "2/05/2023",
     "fechaFinalizacion": "10/3/2024",
     "imagen": "imagen.img"
+  },
+  {
+    "id": 7,
+    "nombre": "asdasd",
+    "precio": "55555",
+    "descripcion": "asdasdas",
+    "modulos": "asdasdasd",
+    "cronograma": {
+      "dias": "asdasd",
+      "horarios": "asdasdas"
+    },
+    "fechaInicio": "1998-01-22",
+    "fechaFinalizacion": "275760-01-22"
   }
 ]

@@ -31,6 +31,8 @@ app.use('/', loginRouter);
 
 app.use('/', loginRouter);
 
+app.use('/register', loginRouter);
+
 
 
 
