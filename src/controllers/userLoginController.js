@@ -28,7 +28,7 @@ const userController = {
         fs.writeFileSync(usuariosJSON, JSON.stringify(users, null, 2));
 
         res.redirect('/');
-    }//casi lo tengo, hay algo que falla, sospecho que me falta poner la ruta en el app.js
+    }
 };
 
 module.exports = userController;    
