@@ -27,9 +27,9 @@ app.use('/products/create', mainRouter);
 
 // Sprint 5
 
-app.use('/login', loginRouter);
+app.use('/', loginRouter);
 
-app.use('/register', loginRouter);
+app.use('/', loginRouter);
 
 
 
