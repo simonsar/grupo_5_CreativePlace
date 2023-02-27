@@ -6,7 +6,7 @@ let users = JSON.parse(fs.readFileSync(usuariosJSON, 'utf-8'));
 
 const userController = {
     login: (req, res) => {
-        return res.render('login')
+        res.render('login')
     },
     loginProcess: (req, res) => {
         let usuarioingreso = req.body   
@@ -17,4 +17,4 @@ const userController = {
     },
 };
 
-module.exports = userController;
+module.exports = userController;    

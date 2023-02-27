@@ -1,0 +1,27 @@
+<%-include("./partials/head", {link: "/css/productList.css", titulo: "Listado de usuarios"}) %>
+<link rel="stylesheet" href="/css/productList.css">
+<title>Listado de usuarios</title>
+    
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    <main>
+        <section class="contenedor-lista">
+        <h1>Listado de usuarios</h1>
+        <form action="/user/search" method="GET">
+            <input type="text" placeholder="Busca un usuario" name="search">
+            <input class="boton-buscar" type="submit" value="Buscar">
+        </form>
+        <ul>
+            <% for (let i = 0; i < productos.length; i++) { %>
+                <li>
+                    <a href="/detalle/<%=productos[i].id%>"><%= productos[i].nombre %></a>
+                </li>
+            <% } %>
+        </ul>
+    </section>
+    </main>
+    <!--MAIN ENDS-->
+    <%- include('./partials/footer')%>
+</body>
+</html>

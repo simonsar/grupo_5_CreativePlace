@@ -11,5 +11,4 @@ router.post('/login', usuariosController.loginProcess);
 
 // router.get('/register', usuariosController.register);
 
-
-module.exports = router;
+router.post('/register', usuariosController.registerProcess);
