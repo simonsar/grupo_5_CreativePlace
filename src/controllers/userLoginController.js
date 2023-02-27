@@ -9,7 +9,7 @@ const userController = {
         res.render('login')
     },
     loginProcess: (req, res) => {
-        let usuarioingreso = req.body   
+         let usuarioingreso = req.body   
     },
     register: (req, res) => {
         res.render('register')

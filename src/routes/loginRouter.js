@@ -9,6 +9,9 @@ router.get('/login', usuariosController.login);
 
 router.post('/login', usuariosController.loginProcess);
 
-// router.get('/register', usuariosController.register);
+router.get('/register', usuariosController.register);
 
-router.post('/register', usuariosController.registerProcess);
+// router.post('/register', usuariosController.registerProcess);
+
+
+module.exports = router;
