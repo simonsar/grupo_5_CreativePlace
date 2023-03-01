@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const mainRoutes = require('./routes/mainRouter');
+const mainRouter = require('./routes/mainRouter');
+const loginRouter = require('./routes/loginRouter');
 
 const path = require('path')
 
@@ -12,23 +13,34 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static('public'));
 
+app.use("/", mainRouter);
+
+app.use("/detalle", mainRouter);
+
+app.use('/carrito', mainRouter);
+
+app.use('/editar', mainRouter);
+
+app.use('/products', mainRouter);
+
+app.use('/products/create', mainRouter);
+
+// Sprint 5
+
+app.use('/', loginRouter);
+
+app.use('/', loginRouter);
+
+app.use('/register', loginRouter);
+
+
+
+
 app.listen(process.env.PORT || 3000, function(){
     console.log("Servidor corriendo");
 });
 
-app.use("/", mainRoutes);
-
-app.use("/detalle", mainRoutes);
-
-app.use('/login', mainRoutes);
-
-app.use('/register', mainRoutes);
-
-app.use('/carrito', mainRoutes);
-
-app.use('/editar', mainRoutes);
-
-app.use('/products', mainRoutes);
-
-app.use('/products/create', mainRoutes);
-
+app.use((req, res, next) => {       //Este es el middleware que redirecciona a la vista de 404Nfound (funciona!)
+    res.status(404).render('404notFound');
+    next();
+})

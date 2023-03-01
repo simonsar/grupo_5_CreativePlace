@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    font-family: 'Abel', sans-serif;
+
+}
+
+ul{
+    padding: 0px;
+}
+
+li{
+    list-style-type: none;
+    padding: 10px;
+}
+
+li a, header nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+p{
+    margin: 0px;
+    font-size: 25px;
+}
+
+/*Header*/
+header{
+    background-color: #D7D7D7;
+    margin: 0;
+}
+
+
+header article div.links{
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 80px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    width: 240px;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+header article input{
+    display: none;
+}
+
+header article input:checked ~ div.links{
+    display: flex;
+}
+
+header article label{
+    display: flex;
+    color: black;
+    font-size: 25px;
+    padding: 10px;
+}
+
+header article form button{
+    background-color: #4e69cb;
+    border: #4e69cb;
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    align-self: center;
+    color: white;
+}
+
+.logo-bars{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    color: #4e69cb;
+    font-family: 'Chivo Mono';
+    margin: 0px;
+    padding-left: 5px;
+}
+/*Header*/
+
+/*Main*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+
+main article.seccion-1{
+    display: flex;
+    flex-direction: column;
+}
+
+main article.seccion-1 img {
+    width: 100%;
+}
+
+main article.seccion-2 form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main form input, main input#descuento{
+    display: flex;
+    width: 100%;
+    background-color: #d9d9d9;
+    border: 1px #d9d9d9;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 2%;
+    margin: 1% 0%;
+}
+
+main article.seccion-2 form div.iconos{
+    font-size: 20px;
+}
+
+.botones{
+    background-color: #4e69cb;
+    border: #4e69cb;
+    height: 60px;
+    border-radius: 10px;
+    align-self: center;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding: 0% 2%;
+    align-items: center;
+    font-size: 25px;
+    width: 100%;
+}

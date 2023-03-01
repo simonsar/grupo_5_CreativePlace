@@ -1,27 +1,18 @@
-<%-include("./partials/head", {link: "/css/productList.css", titulo: "Listado de productos"}) %>
-<link rel="stylesheet" href="/css/productList.css">
-<title>Listado de productos</title>
-    
-</head>
-<body>
-    <%- include('partials/header.ejs') %>
-    <main>
-        <section class="contenedor-lista">
-            <h1>Listado de productos</h1>
-            <form action="/products/search" method="GET">
-                <input type="text" placeholder="Busca un producto" name="search">
-                <input class="boton-buscar" type="submit" value="Buscar">
-            </form>
-            <ul>
-                <% for (let i = 0; i < productResult.length; i++) { %>
-                    <li>
-                        <a href="/detalle/<%=productResult[i].id%>"><%= productResult[i].nombre %></a>
-                    </li>
-                <% } %>
-            </ul>
-        </section>
-    </main>
-    <!--MAIN ENDS-->
-    <%- include('./partials/footer')%>
-</body>
+<%- include(".partials/head", link: "", titulo: "Resultado producto")  %>
+    <body>
+        <%- include('partials/header.ejs') %>
+        <h1>Product List</h1>
+        <ul>
+            <% for (let i = 0; i < productResult.length; i++) { %>
+                <li>
+                    <a href="/detalle/<%=productResult[i].id%>"><%= productResult[i].name %></a>
+                </li>
+            <% } %>
+        </ul>
+        <h2>Search</h2>
+        <form action="/products/search" method="GET">
+            <input type="text" name="search">
+            <input type="submit" value="search">
+        </form>
+    </body>
 </html>

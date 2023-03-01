@@ -1,35 +1,40 @@
 [
-    {
-        "id":1,
-        "firstName":"Juan",
-        "lastName":"in",
-        "country":"France",
-        "email":"cagdahl0@berkeley.edu",
-        "password":"RXVT8IerVmK",
-        "type":"Customer",
-        "avatar":"/images/avatars/tostada.jpg"
-    },
-
-    {
-        "id":2,
-        "firstName":"Lucas",
-        "lastName":"in",
-        "country":"France",
-        "email":"cagdahl0@berkeley.edu",
-        "password":"RXVT8IerVmK",
-        "type":"Customer",
-        "avatar":"/images/avatars/tostada.jpg"
-    },
-
-    {
-        "id":3,
-        "firstName":"Aylen",
-        "lastName":"in",
-        "country":"France",
-        "email":"cagdahl0@berkeley.edu",
-        "password":"RXVT8IerVmK",
-        "type":"Customer",
-        "avatar":"/images/avatars/tostada.jpg"
-    }
-
+  {
+    "id": 1,
+    "firstName": "Juan",
+    "lastName": "in",
+    "country": "France",
+    "email": "cagdahl0@berkeley.edu",
+    "password": "RXVT8IerVmK"
+  },
+  {
+    "id": 2,
+    "firstName": "Lucas",
+    "lastName": "in",
+    "country": "France",
+    "email": "cagdahl0@berkeley.edu",
+    "password": "RXVT8IerVmK"
+  },
+  {
+    "id": 3,
+    "firstName": "Aylen",
+    "lastName": "in",
+    "country": "France",
+    "email": "cagdahl0@berkeley.edu",
+    "password": "RXVT8IerVmK"
+  },
+  {
+    "firstName": "Simon",
+    "lastName": "Sara",
+    "country": "Argentina",
+    "email": "simonsara989@gmail.com",
+    "password": "asdasdasdsa"
+  },
+  {
+    "firstName": "Simon",
+    "lastName": "Sara",
+    "country": "Argentina",
+    "email": "simonsara989@gmail.com",
+    "password": "asdasdasdasd"
+  }
 ]
