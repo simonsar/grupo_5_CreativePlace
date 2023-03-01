@@ -19,6 +19,15 @@ const controller = {
     edit: (req, res) => {
         return res.render('edit-product.ejs')
     },
+    editProcess: (req, res) => {
+        let idProducto = req.params.id
+        function producto(producto) {
+            return producto == idProducto
+        }
+
+        let productoEditar = productos.find(producto)
+        res.render('edit-product')
+    },
     create: function(req, res) {
         res.render('create-product.ejs')
     },
@@ -62,6 +71,7 @@ const controller = {
         
         res.render('productResult', {productResult, productResult});
     }
+
 };
 
 module.exports = controller;
