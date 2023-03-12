@@ -1,3 +1,4 @@
+const {validationResult} = require('express-validator');
 const path = require('path');
 const fs = require('fs');
 
@@ -16,7 +17,9 @@ const userController = {
 
     },
     registerProcess: (req,res) =>{
-        let user = {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+             let user = {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             country: req.body.country,
@@ -27,7 +30,14 @@ const userController = {
 
         fs.writeFileSync(usuariosJSON, JSON.stringify(users, null, 2));
 
-        res.redirect('/');
+        res.redirect('/login');
+        }else{
+            res.render('register', {
+                errors: errors.array(),
+                old: req.body
+            });
+        }
+       
     }
 };
 

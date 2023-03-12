@@ -21,32 +21,38 @@
         </section>
         <section class="seccion-2">
             <h2 class="titulo">Impulsá tu futuro.</h2>
+            <% if(locals.errors){
+              errors.forEach(error => { %>
+                <p class="feedback is-danger"><%= error.msg %></p>
+                <% }) 
+                   } 
+                %>
             <form method="POST" action="/register" >
 
-                <input type="text" name="firstName" id="" placeholder="Nombre">
+                <input type="text" name="firstName" value="<%= locals.old && old.firstName ? old.firstName : ''%>" id="" placeholder="Nombre">
                 
                 
-                    <input type="text" name="lastName" id="" placeholder="Apellido">
+                    <input type="text" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : ''%>" id="" placeholder="Apellido">
                 
                 
                     <select name="country" id="">
                         <option value="" disabled selected>Selecciona tu país de residencia</option>
-                        <option value="Argentina">Argentina</option>
-                        <option value="Bolivia">Bolivia</option>
-                        <option value="Brasil">Brasil</option>
-                        <option value="Chile">Chile</option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Estados Unidos">Estados Unidos</option>
-                        <option value="Honduras">Honduras</option>
-                        <option value="Paraguay">Paraguay</option>
-                        <option value="Perú">Perú</option>
-                        <option value="México">México</option>
-                        <option value="Uruguay">Uruguay</option>
-                        <option value="Venezuela">Venezuela</option>
-                        <option value="Otro">Otro</option>
+                        <option value="Argentina" <%= locals.old && old.country === 'Argentina' ? 'selected' : ''; %>>Argentina</option>
+                        <option value="Bolivia" <%= locals.old && old.country === 'Bolivia' ? 'selected' : ''; %>>Bolivia</option>
+                        <option value="Brasil" <%= locals.old && old.country === 'Brasil' ? 'selected' : ''; %>>Brasil</option>
+                        <option value="Chile" <%= locals.old && old.country === 'Chile' ? 'selected' : ''; %>>Chile</option>
+                        <option value="Colombia" <%= locals.old && old.country === 'Colombia' ? 'selected' : ''; %>>Colombia</option>
+                        <option value="Estados Unidos" <%= locals.old && old.country === 'Estados Unidos' ? 'selected' : ''; %>>Estados Unidos</option>
+                        <option value="Honduras" <%= locals.old && old.country === 'Honduras' ? 'selected' : ''; %>>Hondu ras</option>
+                        <option value="Paraguay" <%= locals.old && old.country === 'Paraguay' ? 'selected' : ''; %>>Paraguay</option>
+                        <option value="Perú" <%= locals.old && old.country === 'Perú' ? 'selected' : ''; %>>Perú</option>
+                        <option value="México" <%= locals.old && old.country === 'México' ? 'selected' : ''; %>>México</option>
+                        <option value="Uruguay" <%= locals.old && old.country === 'Uruguay' ? 'selected' : ''; %>>Uruguay</option>
+                        <option value="Venezuela" <%= locals.old && old.country === 'Venezuela' ? 'selected' : ''; %>>Venezuela</option>
+                        <option value="Otro" <%= locals.old && old.country === 'Otro' ? 'selected' : ''; %>>Otro</option>
                     </select>
                 
-                    <input type="email" name="email" id="" placeholder="E-mail">
+                    <input type="email" name="email" value="<%= locals.old && old.email ? old.email : ''%>" id="" placeholder="E-mail">
                 
 
                 
