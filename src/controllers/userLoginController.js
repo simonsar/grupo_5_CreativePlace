@@ -2,8 +2,9 @@ const {validationResult} = require('express-validator');
 const User = require('../models/User');
 const path = require('path');
 const fs = require('fs');
-
+const bcryptjs = require('bcryptjs');
 const usuariosJSON = path.join(__dirname, '../database/users.json');
+
 let users = JSON.parse(fs.readFileSync(usuariosJSON, 'utf-8'));
 
 const userController = {
@@ -25,7 +26,7 @@ const userController = {
             lastName: req.body.lastName,
             country: req.body.country,
             email: req.body.email,
-            password: req.body.password
+            password: bcryptjs.hashSync(req.body.password, 10)
         }
         users.push(user);
 
@@ -38,6 +39,23 @@ const userController = {
                 old: req.body
             });
         }
+
+        let userInDb = User.findByField('email', req.body.email);
+
+        if (userInDb) {
+            return res.render('register', {
+                errors: {
+                    email: {
+                    msg: 'Este email ya está registrado'
+                    }
+                },
+
+                oldData: req.body
+
+            });
+            
+        }
+        
        
     }
 };
