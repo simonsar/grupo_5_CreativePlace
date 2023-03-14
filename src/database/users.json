@@ -22,5 +22,12 @@
     "country": "France",
     "email": "cagdahl0@berkeley.edu",
     "password": "RXVT8IerVmK"
+  },
+  {
+    "firstName": "Simon",
+    "lastName": "Sara",
+    "country": "Argentina",
+    "email": "simonsara989@gmail.com",
+    "password": "$2a$10$GLxDlQXeJxd9rfKuTw0obuhgYn7yMbMzQ6czsCjBlwOT9QjfqWLoK"
   }
 ]

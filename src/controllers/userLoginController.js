@@ -12,7 +12,18 @@ const userController = {
         res.render('login')
     },
     loginProcess: (req, res) => {
-         let usuarioingreso = req.body   
+         let userToLogin = User.findByField('email', req.body.email);
+
+         if (userToLogin) {
+
+
+         }
+
+         return res.render('login',{
+            errors: {
+                msg: 'Email no registrado'
+            }
+         })
     },
     register: (req, res) => {
         res.render('register')
@@ -42,7 +53,7 @@ const userController = {
 
         let userInDb = User.findByField('email', req.body.email);
 
-        if (userInDb) {
+        if (userInDb) {//esto no esta funcionando 
             return res.render('register', {
                 errors: {
                     email: {
