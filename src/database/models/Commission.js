@@ -15,11 +15,7 @@ module.exports = (sequelize, dataTypes) => {
         scheduleID:{
             foreignKey: true,
             type: dataTypes.INTEGER
-        },
-        userID:{
-            foreignKey: true,
-            type: dataTypes.INTEGER
-        }      
+        }    
     }, 
     {
         timestamps: false
