@@ -28,13 +28,6 @@
     "lastName": "Sara",
     "country": "Argentina",
     "email": "simonsara989@gmail.com",
-    "password": "asdasdasdsa"
-  },
-  {
-    "firstName": "Simon",
-    "lastName": "Sara",
-    "country": "Argentina",
-    "email": "simonsara989@gmail.com",
-    "password": "asdasdasdasd"
+    "password": "$2a$10$GLxDlQXeJxd9rfKuTw0obuhgYn7yMbMzQ6czsCjBlwOT9QjfqWLoK"
   }
 ]

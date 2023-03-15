@@ -15,6 +15,11 @@
             <h2>Hola, ¡volviste!</h2>
             <form action="login.html"> 
                 <input type="email" class="email" placeholder="Correo electrónico">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg  %>
+                    </div>
+                <%} %>
                 <input type="password" class="password" placeholder="Contraseña">
                 <input type="checkbox" class="remember"><span>Recordarme</span>
                 <button class="botones" type="submit">Iniciar Sesión</button>

@@ -19,8 +19,10 @@
   "homepage": "https://github.com/simonsar/grupo_5_nombre#readme",
   "dependencies": {
     "@flaticon/flaticon-uicons": "^1.7.0",
+    "bcryptjs": "^2.4.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "express-validator": "^6.15.0",
     "method-override": "^3.0.0",
     "nodemon": "^2.0.20"
   }

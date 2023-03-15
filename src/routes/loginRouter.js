@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const validations = require('../middlewares/validateRegisterMiddleware');
+
+
 
 const path = require('path')
 
@@ -11,7 +14,7 @@ router.post('/login', usuariosController.loginProcess);
 
 router.get('/register', usuariosController.register);
 
-router.post('/register', usuariosController.registerProcess);
+router.post('/register', validations , usuariosController.registerProcess);
 
 
 module.exports = router;
