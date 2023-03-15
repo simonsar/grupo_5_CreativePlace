@@ -1,17 +1,16 @@
 [
   {
     "id": 1,
-    "nombre": "Marketing Digital",
-    "precio": 35000,
+    "nombre": "Marketing",
+    "precio": "35000",
     "descripcion": "En este curso aprenderás cómo manejar y promocionar productos a través de internet, utilizando canales de comunicación de manera estratégica para alcanzar tus objetivos.",
-    "modulos": 5,
+    "modulos": "",
     "cronograma": {
       "dias": "Martes y Jueves",
       "horarios": "19 a 22hs"
     },
-    "fechaInicio": "03/06/2023",
-    "fechaFinalizacion": "3/09/2023",
-    "imagen": "imagen.img"
+    "fechaInicio": "",
+    "fechaFinalizacion": ""
   },
   {
     "id": 2,
@@ -85,15 +84,15 @@
   },
   {
     "id": 7,
-    "nombre": "asdasd",
-    "precio": "55555",
-    "descripcion": "asdasdas",
-    "modulos": "asdasdasd",
+    "nombre": "Marketing",
+    "precio": "39000",
+    "descripcion": "En este curso aprenderás cómo manejar y promocionar productos a través de internet, utilizando canales de comunicación de manera estratégica para alcanzar tus objetivos.",
+    "modulos": "",
     "cronograma": {
-      "dias": "asdasd",
-      "horarios": "asdasdas"
+      "dias": "Martes y Jueves",
+      "horarios": "19 a 22hs"
     },
-    "fechaInicio": "1998-01-22",
-    "fechaFinalizacion": "275760-01-22"
+    "fechaInicio": "",
+    "fechaFinalizacion": ""
   }
 ]

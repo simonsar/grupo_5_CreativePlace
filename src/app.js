@@ -5,6 +5,9 @@ const loginRouter = require('./routes/loginRouter');
 
 const path = require('path')
 
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 
@@ -19,7 +22,7 @@ app.use("/detalle", mainRouter);
 
 app.use('/carrito', mainRouter);
 
-app.use('/editar', mainRouter);
+app.use('/productos/editar', mainRouter);
 
 app.use('/products', mainRouter);
 

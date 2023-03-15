@@ -7,25 +7,24 @@
     <%- include('./partials/header')%>
 <!--MAIN START-->
     <main>
-        <form method="POST" action="/products/create">
+        <form method="POST" action="/productos/editar/<%=producto.id%>?_method=PUT">
             <section class="section-1">
                 <div class="imagen">
                 <img src="/img/upload img.jpg" alt="img" class="imagen">
                 </div>
                 <article class="detalle-producto">
-                    <input type="text" placeholder="Nombre del producto" name="nombre">
+                    <input type="text" name="nombre" value= <%= producto.nombre%>>
                     
-                    <textarea id="text" name="descripcion" rows="8" cols="40" placeholder="Descripción"></textarea>
+                    <textarea id="text" name="descripcion" rows="8" cols="40"><%= producto.descripcion %></textarea>
                     
                     <div class="categoria-precios"> 
-                        <input type="text" name="categoria" placeholder="Categoría">
-                        <input type="number" name="precio" placeholder="Precio">
+                        <input type="number" name="precio" placeholder="Precio" value= "<%= producto.precio%>">
                     </div> 
                 </article>
             </section>
 
             <section class="section-modulo">
-                <article class="modulo">
+                <article class="modulo"> 
                     <p class="subtitulo-main">Módulo 1</p>
                     <br>
                     <textarea class="descripcion" id="text" name="modulos" rows="8" cols="40" placeholder="Descripción"></textarea>
@@ -38,16 +37,16 @@
                     <article class="modalidad1">
                         
                             <p class="subtitulo-main"><i class="fa-solid fa-laptop"></i> Cronograma</p>
-                            <input class="descripcion" type="text" name="dias" placeholder="Días de clase">
+                            <input class="descripcion" type="text" name="dias" value= "<%= producto.cronograma.dias%>">
 
-                            <input class="descripcion" type="text" name="horarios" placeholder="Horarios de clase">
+                            <input class="descripcion" type="text" name="horarios" value= "<%= producto.cronograma.horarios%>">
                     </article>
                     <article class="modalidad1">
                             <p class="subtitulo-main"><i class="fa-solid fa-calendar-days"></i> Fecha de inicio</p>
-                            <input class="descripcion" type="date" name="fechaInicio"> 
+                            <input class="descripcion" type="date" name="fechaInicio" value= "<%= producto.fechaInicio%>"> 
 
                             <p class="subtitulo-main"><i class="fa-solid fa-calendar-days"></i> Fecha de finalización</p>
-                            <input class="descripcion" type="date" name="fechaFinalizacion">
+                            <input class="descripcion" type="date" name="fechaFinalizacion" value= <%= producto.fechaFinalizacion%>> >
                     </article>
                     <article class="modalidad1">
                             <p class="subtitulo-main"><i class="fa-regular fa-clock"></i> Turnos</p>

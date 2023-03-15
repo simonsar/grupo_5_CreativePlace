@@ -10,23 +10,36 @@ const controller = {
     },                                                                              
     detalle: (req, res) => {
         let producto = productos.find((curso) => req.params.id == curso.id );
-        console.log(producto);
         return res.render('detalle-de-producto', {producto: producto});
     },
     carrito: (req, res) => {
         return res.render('carrito-de-compras')
     },
     edit: (req, res) => {
-        return res.render('edit-product.ejs')
+        let producto = productos.find((curso) => req.params.id == curso.id );
+        return res.render('edit-product.ejs', {producto: producto});
     },
     editProcess: (req, res) => {
-        let idProducto = req.params.id
-        function producto(producto) {
-            return producto == idProducto
-        }
+        productos.forEach(producto => {
+            if(producto.id == req.params.id){  
+                producto.precio = req.body.precio
+                producto.nombre = req.body.nombre,
+                producto.precio = req.body.precio,
+                producto.descripcion = req.body.descripcion,
+                producto.modulos = req.body.modulos,
+                producto.cronograma = {
+                    dias: req.body.dias,
+                    horarios: req.body.horarios,
+                },
+                producto.fechaInicio = req.body.fechaInicio,
+                producto.fechaFinalizacion = req.body.fechaFinalizacion,
+                producto.imagen = req.body.imagen    
+        
+        }});
 
-        let productoEditar = productos.find(producto)
-        res.render('edit-product')
+        fs.writeFileSync(productosJSON, JSON.stringify(productos, null, 2));
+
+        res.redirect('/detalle/' + req.params.id);
     },
     create: function(req, res) {
         res.render('create-product.ejs')
