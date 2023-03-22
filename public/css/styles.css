@@ -86,10 +86,13 @@ header article form button{
 }
 
 .logo {
-    color: #4e69cb;
     font-family: 'Chivo Mono';
     margin: 0px;
     padding-left: 5px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: #4e69cb;
 }
 /*main*/
 
@@ -386,4 +389,11 @@ div.copyright p{
         align-self: flex-end;
     }
     /*Footer*/
+
+    
+}
+/*Por ahora*/
+.por_ahora{
+    display: flex;
+    justify-content: center;
 }

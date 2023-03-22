@@ -9,10 +9,10 @@
             <article class="primera-parte">
                 <div class="titulo-texto">
                     <h2 class="titulo-curso">
-                        <%= producto.nombre %> 
+                        <%= producto.name%> 
                     </h2>
-                    <p><%= producto.descripcion %></p>
-                    <h3 class="precio">$<%= producto.precio %></h3>
+                    <p><%= producto.description %></p>
+                    <h3 class="precio">$<%= producto.price %></h3>
                 </div>
                 <div class="contenedor-divs-deseados-boton">
                     <div class="deseados">
@@ -70,7 +70,13 @@
                     <a href="#" class="vista-desktop botones">Descargar programa</a>
                 </div>
             </article>
-        </section>    
+        </section>
+        <section class="por_ahora">
+            <a href="/productos/editar/<%= producto.id%>" class="vista-desktop botones">Editar producto</a>
+            <form action="/delete/<%= producto.id%>?_method=DELETE" method="POST">
+                <button class="borrar" type="submit">Borrar Producto</button>
+            </form>
+        </section> 
     </main>
     <%- include('./partials/footer')%>
 </body>

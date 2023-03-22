@@ -26,5 +26,6 @@ router.get('/products/create', mainController.create); //Form creacion productos
 
 router.post('/products/create', mainController.createProcess); //Accion de creacion (donde se envia form)
 
+router.delete('/delete/:id', mainController.deleteProcess);
 
 module.exports = router;

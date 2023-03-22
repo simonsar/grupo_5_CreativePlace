@@ -13,12 +13,12 @@
                 <img src="/img/upload img.jpg" alt="img" class="imagen">
                 </div>
                 <article class="detalle-producto">
-                    <input type="text" name="nombre" value= <%= producto.nombre%>>
+                    <input type="text" name="nombre" value= <%= producto.name%>>
                     
-                    <textarea id="text" name="descripcion" rows="8" cols="40"><%= producto.descripcion %></textarea>
+                    <textarea id="text" name="descripcion" rows="8" cols="40"><%= producto.description %></textarea>
                     
                     <div class="categoria-precios"> 
-                        <input type="number" name="precio" placeholder="Precio" value= "<%= producto.precio%>">
+                        <input type="number" name="precio" placeholder="Precio" value= "<%= producto.price %>">
                     </div> 
                 </article>
             </section>
@@ -37,16 +37,16 @@
                     <article class="modalidad1">
                         
                             <p class="subtitulo-main"><i class="fa-solid fa-laptop"></i> Cronograma</p>
-                            <input class="descripcion" type="text" name="dias" value= "<%= producto.cronograma.dias%>">
+                            <input class="descripcion" type="text" name="dias" value= "<%= //producto.cronograma.dias%>">
 
-                            <input class="descripcion" type="text" name="horarios" value= "<%= producto.cronograma.horarios%>">
+                            <input class="descripcion" type="text" name="horarios" value= "<%= //producto.cronograma.horarios%>">
                     </article>
                     <article class="modalidad1">
                             <p class="subtitulo-main"><i class="fa-solid fa-calendar-days"></i> Fecha de inicio</p>
-                            <input class="descripcion" type="date" name="fechaInicio" value= "<%= producto.fechaInicio%>"> 
+                            <input class="descripcion" type="date" name="fechaInicio" value= "<%= //producto.fechaInicio%>"> 
 
                             <p class="subtitulo-main"><i class="fa-solid fa-calendar-days"></i> Fecha de finalización</p>
-                            <input class="descripcion" type="date" name="fechaFinalizacion" value= <%= producto.fechaFinalizacion%>> >
+                            <input class="descripcion" type="date" name="fechaFinalizacion" value= <%= //producto.fechaFinalizacion%>> >
                     </article>
                     <article class="modalidad1">
                             <p class="subtitulo-main"><i class="fa-regular fa-clock"></i> Turnos</p>
@@ -58,8 +58,10 @@
                             </select>
                         </article>
                     </section>
-                    <button class="boton-submit" type="submit">Subir nuevo programa</button>
+                    <button class="boton-submit" type="submit">Editar programa</button>
+                    
         </form>
+
     </main>
 <!--MAIN ENDS-->
     <%- include('./partials/footer')%>

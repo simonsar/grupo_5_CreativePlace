@@ -23,7 +23,7 @@
         <section class="second-section">
             <% for( let i = 0; i < productos.length; i++ ) { %>
                 <a href="/detalle/<%= productos[i].id %> ">
-                    <%= productos[i].nombre %> 
+                    <%= productos[i].name %> 
                 </a>
             <% } %>
 
@@ -48,7 +48,9 @@
             </a>-->
         </section>
 
-        <section></section>
+        <section class="por_ahora">
+            <a href="/products/create">Crear Producto</a>
+        </section>
     </main> 
 
 <!--Termina MAIN-->

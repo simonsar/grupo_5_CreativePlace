@@ -1,26 +1,55 @@
 const path = require('path');
 const fs = require('fs');
+const db = require('../database/models');
+
 
 const productosJSON = path.join(__dirname, '../database/products.json')
 let productos = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
 
 const controller = {
     index: (req, res) => {
-        return res.render('home', {productos: productos})
+        db.Course.findAll()
+            .then((cursos)=> {
+                res.render('home', {productos: cursos});
+            })
+        //return res.render('home', {productos: productos})
     },                                                                              
     detalle: (req, res) => {
-        let producto = productos.find((curso) => req.params.id == curso.id );
-        return res.render('detalle-de-producto', {producto: producto});
+        db.Course.findByPk(req.params.id)
+            .then((curso)=> {
+                res.render('detalle-de-producto', {producto: curso});
+            })
+        /*let producto = productos.find((curso) => req.params.id == curso.id );
+        return res.render('detalle-de-producto', {producto: producto});*/
     },
     carrito: (req, res) => {
         return res.render('carrito-de-compras')
     },
     edit: (req, res) => {
-        let producto = productos.find((curso) => req.params.id == curso.id );
-        return res.render('edit-product.ejs', {producto: producto});
-    },
+        db.Course.findByPk(req.params.id)
+            .then((curso)=> {
+                res.render('edit-product.ejs', {producto: curso});
+            })
+        /*let producto = productos.find((curso) => req.params.id == curso.id );
+        return res.render('edit-product.ejs', {producto: producto});*/
+    }, 
     editProcess: (req, res) => {
-        productos.forEach(producto => {
+        let product = {
+            name: req.body.nombre,
+            price: req.body.precio,
+            description: req.body.descripcion,
+        };
+        db.Course.update(
+            product,
+        {
+            where: {
+                id: req.params.id
+            }
+        })
+
+        res.redirect('/detalle/' + req.params.id);
+
+        /*productos.forEach(producto => {
             if(producto.id == req.params.id){  
                 producto.precio = req.body.precio
                 producto.nombre = req.body.nombre,
@@ -37,15 +66,17 @@ const controller = {
         
         }});
 
-        fs.writeFileSync(productosJSON, JSON.stringify(productos, null, 2));
-
-        res.redirect('/detalle/' + req.params.id);
+        fs.writeFileSync(productosJSON, JSON.stringify(productos, null, 2));*/
+        
     },
     create: function(req, res) {
         res.render('create-product.ejs')
     },
     products: (req, res) => {
-        res.render('productList', {productos: productos});
+        db.Course.findAll()
+            .then((cursos)=> {
+                res.render('productList', {productos: cursos});
+            })
     },
     createProcess: (req, res) => {
         let product = {
@@ -62,9 +93,18 @@ const controller = {
             fechaFinalizacion: req.body.fechaFinalizacion,
             imagen: req.body.imagen,
         };
+
+        db.Course.create({
+            name: product.nombre,
+            price: product.precio,
+            description: product.descripcion
+        })
+
+         
+        /*
         productos.push(product);
 
-        fs.writeFileSync(productosJSON, JSON.stringify(productos, null, 2));
+        fs.writeFileSync(productosJSON, JSON.stringify(productos, null, 2));*/
 
         res.redirect('/products');
 
@@ -83,6 +123,15 @@ const controller = {
         }
         
         res.render('productResult', {productResult, productResult});
+    },
+    deleteProcess: (req, res) => {
+        db.Course.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+
+        res.redirect('/products')
     }
 
 };
