@@ -1,6 +1,6 @@
  
 module.exports = (sequelize, dataTypes) => {
-    const Usuario = sequelize.define('Classroom', {
+    const Classroom = sequelize.define('Classroom', {
         id: {
             autoIncrement: true,
             primaryKey: true,
@@ -8,22 +8,19 @@ module.exports = (sequelize, dataTypes) => {
         },
         linkMeeting: {
             type: dataTypes.STRING
-        },
-        commissionID:{
-            type: dataTypes.INTEGER
-        }    
+        }   
     }, 
     {
         timestamps: false
     });
-
-    /*Classroom.associate = () => {
-        Classroom.belongsTo(models.Commission, {
-            as: "classroom",
+    
+    Classroom.associate = (models) => {
+        Classroom.hasMany(models.Commission, {
+            as: "Classroom",
             foreignKey: "commissionID"
         })
-    }*/
+    }
 
-    return Usuario;
+    return Classroom;
 
 }

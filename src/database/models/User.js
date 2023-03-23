@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    const Usuario = sequelize.define('User', {
+    const User = sequelize.define('User', {
         id: {
             autoIncrement: true,
             primaryKey: true,
@@ -34,6 +34,20 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     });
 
-    return Usuario;
+    User.associate = (models) => {
+        User.belongsTo(models.Role, {
+            as: "role",
+            foreignKey: "roleID"
+        })
+        User.belongsToMany(models.Commission, {
+            as: "Commission",
+            through: "User_Commission",
+            foreignKey: "UserID",
+            otherKey: "CommissionID",
+            timestamps: false
+        });
+    }
+
+    return User;
 
 }

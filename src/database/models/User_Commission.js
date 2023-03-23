@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    const Usuario = sequelize.define('User_Commission', {
+    const User_Commission = sequelize.define('User_Commission', {
         id: {
             autoIncrement: true,
             primaryKey: true,
@@ -18,6 +18,6 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     });
 
-    return Usuario;
+    return User_Commission;
 
 }

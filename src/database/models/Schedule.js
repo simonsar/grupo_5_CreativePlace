@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    const Usuario = sequelize.define('Schedule', {
+    const Schedule = sequelize.define('Schedule', {
         id: {
             autoIncrement: true,
             primaryKey: true,
@@ -16,6 +16,12 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     });
 
-    return Usuario;
+    Schedule.associate = (models) => {
+        Schedule.hasMany(models.Commission, {
+            as: "commission",
+            foreignKey: "scheduleID"
+        })
+    }
+    return Schedule;
 
 }

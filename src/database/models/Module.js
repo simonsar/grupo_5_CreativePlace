@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    const Usuario = sequelize.define('Module', {
+    const Module = sequelize.define('Module', {
         id: {
             autoIncrement: true,
             primaryKey: true,
@@ -23,6 +23,13 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     });
 
-    return Usuario;
+    Module.associate = (models) => {
+        Module.belongsTo(models.Course, {
+            as: "course",
+            foreignKey: "courseID"
+        })
+    }
+
+    return Module;
 
 }
