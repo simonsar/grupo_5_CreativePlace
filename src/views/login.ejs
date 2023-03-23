@@ -13,14 +13,14 @@
         
         <section class="seccion-2">
             <h2>Hola, ¡volviste!</h2>
-            <form action="login.html"> 
-                <input type="email" class="email" placeholder="Correo electrónico">
+            <form action="/login" method="POST"> 
+                <input type="email" name="email" class="email" placeholder="Correo electrónico">
                 <% if (locals.errors && errors.email) { %>
                     <div class="text-danger">
                         <%= errors.email.msg  %>
                     </div>
                 <%} %>
-                <input type="password" class="password" placeholder="Contraseña">
+                <input type="password" name="password" class="password" placeholder="Contraseña">
                 <input type="checkbox" class="remember"><span>Recordarme</span>
                 <button class="botones" type="submit">Iniciar Sesión</button>
                 <p class="link-login">¿No tenes cuenta?<a href="/register"> Hace click aquí</a></p>

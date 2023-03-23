@@ -308,3 +308,22 @@ div.copyright p{
     }
     /*Footer*/
 }
+.por_ahora{
+    display: flex;
+    justify-content: center;
+    margin: 2% 0% 2%;
+    width: 100%;
+}
+.por_ahora_boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #4e69cb;
+    border: #4e69cb;
+    font-size: 20px;
+    color: white;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+}

@@ -46,7 +46,7 @@
                             <input class="descripcion" type="date" name="fechaInicio" value= "<%= //producto.fechaInicio%>"> 
 
                             <p class="subtitulo-main"><i class="fa-solid fa-calendar-days"></i> Fecha de finalización</p>
-                            <input class="descripcion" type="date" name="fechaFinalizacion" value= <%= //producto.fechaFinalizacion%>> >
+                            <input class="descripcion" type="date" name="fechaFinalizacion" value= <%= //producto.fechaFinalizacion%>>
                     </article>
                     <article class="modalidad1">
                             <p class="subtitulo-main"><i class="fa-regular fa-clock"></i> Turnos</p>
@@ -58,10 +58,15 @@
                             </select>
                         </article>
                     </section>
-                    <button class="boton-submit" type="submit">Editar programa</button>
-                    
-        </form>
 
+                    <section class="por_ahora">
+                        <button class="por_ahora_boton" type="submit">Editar programa</button>
+                    </section>
+        </form>
+        <form action="/delete/<%= producto.id%>?_method=DELETE" method="POST">
+            <button class="por_ahora_boton" type="submit">Borrar Producto</button>
+        </form>
+        
     </main>
 <!--MAIN ENDS-->
     <%- include('./partials/footer')%>

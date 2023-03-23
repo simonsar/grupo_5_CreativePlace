@@ -10,13 +10,19 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
         },
         commissionID:{
-            foreignKey: true,
             type: dataTypes.INTEGER
         }    
     }, 
     {
         timestamps: false
     });
+
+    /*Classroom.associate = () => {
+        Classroom.belongsTo(models.Commission, {
+            as: "classroom",
+            foreignKey: "commissionID"
+        })
+    }*/
 
     return Usuario;
 

@@ -73,9 +73,7 @@
         </section>
         <section class="por_ahora">
             <a href="/productos/editar/<%= producto.id%>" class="vista-desktop botones">Editar producto</a>
-            <form action="/delete/<%= producto.id%>?_method=DELETE" method="POST">
-                <button class="borrar" type="submit">Borrar Producto</button>
-            </form>
+            
         </section> 
     </main>
     <%- include('./partials/footer')%>

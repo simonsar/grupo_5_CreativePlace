@@ -501,6 +501,15 @@ div.copyright p{
         display: flex;
         justify-content: space-evenly;
         padding-top: 10%;
+        padding-right: 4%;
+    }
+    .por_ahora_boton{
+        background-color: #4e69cb;
+        border: #4e69cb;
+        font-size: 20px;
+        color: white;
+        padding: 5% 50%;
+        border-radius: 10px;
     }
 }
 
