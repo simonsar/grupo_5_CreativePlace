@@ -20,11 +20,7 @@ function addProduct(){
         name: document.getElementById('name').innerText,
         description: document.getElementById('description').innerText,
         price: document.getElementById('price').innerText.replace('$', ''), //PREGUNTA 1: name, descrption y price estan en el mismo div, debería traerlos todos juntos?
-        moduls: ,
-        duration:, //PREGUNTA 2: No se si me combiene traer moduls, duration,date,shift porque en realidad es como una vista previa en el carrito, nada mas, no creo que requiera tanto detalle.
-        date: ,
-        shift: 
-
+        
     }
 
     let cart = JSON.parse(localStorage.getItem('productInCart'))
@@ -33,6 +29,15 @@ function addProduct(){
         product.subtotal = product.price
         cart.push(product)
     }else{
-
+        let ifExist = cart.find(row => row.id == product.id)
+        if (ifExist) {
+            ifExist.amount += 1
+            ifExist.subtotal += ifExist.price
+        }else{
+            product.amount = 1  
+            product.subtotal = product.price
+            cart = [...cart, product]
+        }
     }
+    localStorage.setItem('productInCart', JSON.stringify(cart))
 }
