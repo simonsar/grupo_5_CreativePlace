@@ -5,21 +5,22 @@
     
     <main>
         <section>
-            <img src="/img/pexels-img2.jpg" alt="img" class="imagen">
+            <div id="idProduct"><% producto.id %></div>
+            <img src="/img/pexels-img2.jpg" alt="img" class="imagen" id="img">
             <article class="primera-parte">
                 <div class="titulo-texto">
-                    <h2 class="titulo-curso">
+                    <h2 class="titulo-curso" id="name">
                         <%= producto.name%> 
                     </h2>
-                    <p><%= producto.description %></p>
-                    <h3 class="precio">$<%= producto.price %></h3>
+                    <p id="description"><%= producto.description %></p>
+                    <h3 class="precio" id="price">$<%= producto.price %></h3>
                 </div>
                 <div class="contenedor-divs-deseados-boton">
                     <div class="deseados">
                         <li><a href="#">Añadir a la lista de deseados</a></li>
                     </div>
                     <div class="deseados-boton">
-                        <a href="#" class="botones">Añadir al carrito</a>
+                        <a href="#" class="botones" id="addCart">Añadir al carrito</a>
                         <a href="#" class="vista-desktop botones">¡Comprar ya!</a>
                     </div>
                 </div>
@@ -76,5 +77,6 @@
         </section> 
     </main>
     <%- include('./partials/footer')%>
+    <script src="/public/js/addShopCart.js"></script>
 </body>
 </html>
