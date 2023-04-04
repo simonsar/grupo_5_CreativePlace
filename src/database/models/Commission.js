@@ -14,18 +14,19 @@ module.exports = (sequelize, dataTypes) => {
         scheduleID:{
             type: dataTypes.INTEGER
         },
-        commissionID:{
+        classroomID:{
             type: dataTypes.INTEGER
         }        
     }, 
-    {
+    {   
+        tableName: "Commission",
         timestamps: false
     });
 
     Commission.associate = (models) => {
         Commission.belongsTo(models.Classroom, {
-            as: "Commission",
-            foreignKey: "commissionID"
+            as: "Classroom",
+            foreignKey: "classroomID"
         })
         Commission.belongsTo(models.Course, {
             as: "Course",
@@ -38,8 +39,8 @@ module.exports = (sequelize, dataTypes) => {
         Commission.belongsToMany(models.User, {
             as: "user",
             through: "User_Commission",
-            foreignKey: "CommissionID",
-            otherKey: "UserID",
+            foreignKey: "commissionID",
+            otherKey: "userID",
             timestamps: false
         });
     }

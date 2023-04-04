@@ -8,14 +8,14 @@ let productos = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
 
 const controller = {
     index: (req, res) => {
-        db.Course.findAll()
+        db.Course.findAll({include: ["Commission"]})
             .then((cursos)=> {
                 res.render('home', {productos: cursos});
             })
         //return res.render('home', {productos: productos})
     },                                                                              
     detalle: (req, res) => {
-        db.Course.findByPk(req.params.id)
+        db.Course.findByPk(req.params.id,{include: ["Commission"]})
             .then((curso)=> {
                 res.render('detalle-de-producto', {producto: curso});
             })

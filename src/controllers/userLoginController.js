@@ -32,6 +32,12 @@ const userController = {
          })
         
     },
+    editarUsuario: () => {
+
+    },
+    eliminarUsuario: () => {
+        
+    },
     register: (req, res) => {
         res.render('register')
 
@@ -39,29 +45,31 @@ const userController = {
     registerProcess: (req,res) =>{
         
         let errors = validationResult(req);
-        if(errors.isEmpty()){
+        
+        if(errors.isEmpty() && db.User.findOne({where:{email: req.body.email}}) == null){
              let user = {
                 first_Name: req.body.firstName,
                 last_Name: req.body.lastName,
                 country: req.body.country,
                 email: req.body.email,
                 password: bcryptjs.hashSync(req.body.password, 10)
-        }
-        users.push(user);
+            }
+            users.push(user);
 
-        db.User.create(user);
+            db.User.create(user);
 
-        fs.writeFileSync(usuariosJSON, JSON.stringify(users, null, 2));
+            fs.writeFileSync(usuariosJSON, JSON.stringify(users, null, 2));
 
-        res.redirect('/login');
+            res.redirect('/login');
         }else{
             res.render('register', {
                 errors: errors.array(),
                 old: req.body
             });
+            console.log(errors)
         }
 
-        let userInDb = User.findByField('email', req.body.email);
+        /*let userInDb = User.findByField('email', req.body.email);
 
         if (userInDb) {//esto no esta funcionando 
             return res.render('register', {
@@ -75,7 +83,7 @@ const userController = {
 
             });
             
-        }
+        }*/
 
         
        

@@ -22,12 +22,12 @@ module.exports = (sequelize, dataTypes) => {
 
     Course.associate = (models) => {
         Course.hasMany(models.Commission, {
-            as: "commission",
+            as: "Commission",
             foreignKey: "courseID"
         })
         Course.hasMany(models.Module, {
             as: "module",
-            foreignKey: "courseID"
+            foreignKey: "moduleID"
         })
     }
 
