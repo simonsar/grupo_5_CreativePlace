@@ -12,25 +12,34 @@ const userController = {
     login: (req, res) => {
         res.render('login')
     },
-    loginProcess: (req, res) => {
+    loginProcess: async (req, res) => {
          //let userToLogin = User.findByField('email', req.body.email);
-         
-         db.User.findOne({
-            where:{email: req.body.email}
-         }).then((usuario)=>{
+        try {
+            let usuario = await db.User.findOne({
+                where:{email: req.body.email}
+            })
+
             if(usuario){
+                if (!bcryptjs.compareSync(req.body.password, usuario.password)){
+                    return res.render('login',{
+                        errors: {
+                            msg: 'La contraseña no es correcta'
+                        }
+                    })
+                }
                 req.session.user = usuario
-                res.locals.user = usuario 
+                res.locals.user = usuario
                 return res.redirect('/'/*perfil*/);
             }else{
                 return res.render('login',{
                     errors: {
                         msg: 'Email no registrado'
                     }
-                 })
+                })
             }
-         })
-        
+        } catch (error) {
+            console.log(error)
+        }
     },
     editarUsuario: () => {
 
@@ -42,11 +51,11 @@ const userController = {
         res.render('register')
 
     },
-    registerProcess: (req,res) =>{
+    registerProcess: async (req,res) =>{
         
         let errors = validationResult(req);
         
-        if(errors.isEmpty() && db.User.findOne({where:{email: req.body.email}}) == null){
+        if(errors.isEmpty() && await db.User.findOne({where:{email: req.body.email}}) == null){
              let user = {
                 first_Name: req.body.firstName,
                 last_Name: req.body.lastName,

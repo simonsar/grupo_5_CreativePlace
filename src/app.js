@@ -2,14 +2,26 @@ const express = require("express");
 const app = express();
 const mainRouter = require('./routes/mainRouter');
 const loginRouter = require('./routes/loginRouter');
-
+const session = require('express-session');
+const cookie = require('cookie-parser')
 const path = require('path')
+
+const usuarioMiddle = require('./middlewares/usuario')
 
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
+app.use(session({
+    secret: "Secreto",
+    resave: true,
+    saveUninitialized: true
+}));
+
+app.use(cookie())
+
+app.use(usuarioMiddle)
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -47,3 +59,4 @@ app.use((req, res, next) => {       //Este es el middleware que redirecciona a l
     res.status(404).render('404notFound');
     next();
 })
+

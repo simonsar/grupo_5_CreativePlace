@@ -4,9 +4,15 @@
             <input type="checkbox" name="menu-hamburguesa" id="menu-hamburguesa">
             <label for="menu-hamburguesa"><i class="fas fa-bars"></i></label>
             <div class="links">
-                <form action="#" method="post">
-                    <button>Iniciar Sesión</button>
-                </form>
+                <% if(locals.user){ %>
+                    <form action="#" method="post">
+                        <button>Perfil</button>
+                    </form>
+                <% } else { %>
+                    <form action="#" method="post">
+                        <button>Iniciar Sesión</button>
+                    </form>
+                <% } %>
                 <ul>
                     <li><a href="/products">Cursos</a></li>
                     <li><a href="#">Sobre nosotros</a></li>
@@ -28,4 +34,4 @@
     <a href='/login' class="vista-desktop">Iniciar Sesión</a> 
 </header>
 
-<% console.log(locals) %>
+<% console.log(locals.user) %>
