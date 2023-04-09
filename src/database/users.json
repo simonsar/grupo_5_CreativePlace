@@ -52,10 +52,32 @@
     "password": "$2a$10$voJQ3rR3ini7ylaMuU7JLOPDkpAXVbu2itYZXNOk3Gyb4wF3dBHb2"
   },
   {
+<<<<<<< HEAD
     "first_Name": "Simon",
     "last_Name": "Sara",
     "country": "Argentina",
     "email": "simonsara989@gmail.com",
     "password": "$2a$10$cfGggH6/cC9IOEqmJJ0MuuuxfFP1LEMtvnnEBCl/pIpt2cmjykpPO"
+=======
+    "first_Name": "asd",
+    "last_Name": "asd",
+    "country": "Argentina",
+    "email": "Asdasd_0@asdasd.com",
+    "password": "$2a$10$IUSrB/AR1L9xkCe55Wjoxel2CMzXmVWN0uDZz6GkBcwCBD.cQk.Ia"
+  },
+  {
+    "first_Name": "dasasd",
+    "last_Name": "asdasd",
+    "country": "Argentina",
+    "email": "Asdasd_00@asdasd.com",
+    "password": "$2a$10$K4SayFvlVFWg/6Au7hlU.Oh/6hyMOm7lNhN2ARsAgBl4b3fdBA/T6"
+  },
+  {
+    "first_Name": "asdasd",
+    "last_Name": "asdasd",
+    "country": "Argentina",
+    "email": "Asdasd_00@asdasd.com",
+    "password": "$2a$10$4CS8/CN7cqxN0l1QQkrlZe2kIT4YrDs9ciEy6RugjDTLMevGdheai"
+>>>>>>> 3d22cba0b33f8e503b183879e28cad53561d8bde
   }
 ]

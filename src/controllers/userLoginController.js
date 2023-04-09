@@ -12,41 +12,83 @@ const userController = {
     login: (req, res) => {
         res.render('login')
     },
-    loginProcess: (req, res) => {
+    loginProcess: async (req, res) => {
          //let userToLogin = User.findByField('email', req.body.email);
-         
-         db.User.findOne({
-            where:{email: req.body.email}
-         }).then((usuario)=>{
+        try {
+            let usuario = await db.User.findOne({
+                where:{email: req.body.email}
+            })
+
             if(usuario){
+                if (!bcryptjs.compareSync(req.body.password, usuario.password)){
+                    return res.render('login',{
+                        errors: {
+                            msg: 'La contraseña no es correcta'
+                        }
+                    })
+                }
                 req.session.user = usuario
-                res.locals.user = usuario 
+                res.locals.user = usuario
                 return res.redirect('/'/*perfil*/);
             }else{
                 return res.render('login',{
                     errors: {
                         msg: 'Email no registrado'
                     }
-                 })
+                })
             }
-         })
-        
+        } catch (error) {
+            console.log(error)
+        }
     },
-    editarUsuario: () => {
+    perfil: (req, res) => {
+        db.User.findByPk(res.locals.id/* ,{include: ["Commission"]} */)
+        .then((user)=> {
+            res.render('perfil', {usuario: user});
+        })
+    },
+    editarUsuario: (req, res) => {
+        db.User.findByPk(res.locals.id)
+            .then((user)=> {
+                res.render('edit-product.ejs', {usuario: user});
+            })
+    },
+    editarUsuarioProcess: (req, res) => {
+        let usuario = {
+            first_Name: req.body.nombre,
+            last_Name: req.body.apellido,
+            country: req.body.pais,
+            email: req.body.email,
+            password: req.body.contraseña
+        };
+        db.User.update(
+            usuario,
+        {
+            where: {
+                id: res.locals.id
+            }
+        })
 
+        res.redirect('/perfil/' + res.locals.id);
     },
-    eliminarUsuario: () => {
-        
+    eliminarUsuarioProcess: () => {
+        db.User.destroy({
+            where: {
+                id: res.params.id
+            }
+        })
+
+        res.redirect('register')
     },
     register: (req, res) => {
         res.render('register')
 
     },
-    registerProcess: (req,res) =>{
+    registerProcess: async (req,res) =>{
         
         let errors = validationResult(req);
         
-        if(errors.isEmpty() && db.User.findOne({where:{email: req.body.email}}) == null){
+        if(errors.isEmpty() && await db.User.findOne({where:{email: req.body.email}}) == null){
              let user = {
                 first_Name: req.body.firstName,
                 last_Name: req.body.lastName,

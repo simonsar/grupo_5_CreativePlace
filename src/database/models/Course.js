@@ -22,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Course.associate = (models) => {
         Course.hasMany(models.Commission, {
-            as: "Commission",
+            as: "commission",
             foreignKey: "courseID"
         })
         Course.hasMany(models.Module, {

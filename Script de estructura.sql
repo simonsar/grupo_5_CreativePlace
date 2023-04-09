@@ -19,10 +19,7 @@ CREATE TABLE `commission`(
 `courseID` INT,
 `scheduleID` INT,
 `classroomID` INT,
-PRIMARY KEY(`id`),
-FOREIGN KEY(`courseID`) REFERENCES course(`id`),
-FOREIGN KEY(`scheduleID`) REFERENCES schedule(`id`),
-FOREIGN KEY(`classroomID`) REFERENCES classroom(`id`)
+PRIMARY KEY(`id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `role`(
@@ -37,22 +34,19 @@ CREATE TABLE `user`(
 `last_Name` VARCHAR(30),
 `country` VARCHAR(30),
 `email` VARCHAR(30),
-`password` VARCHAR(30),
+`password` VARCHAR(100),
 `roleID` INT,
-PRIMARY KEY(`id`),
-FOREIGN KEY(`roleID`) REFERENCES role(`id`)
+PRIMARY KEY(`id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `user_commission`(
 `id` INT AUTO_INCREMENT,
 `userID` INT,
 `commissionID` INT,
-PRIMARY KEY(`id`),
-FOREIGN KEY(`userID`) REFERENCES user(`id`),
-FOREIGN KEY(`commissionID`) REFERENCES commission(`id`)
+PRIMARY KEY(`id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE `Classroom`(
+CREATE TABLE `classroom`(
 `id` INT AUTO_INCREMENT,
 `linkMeeting` VARCHAR(255),
 PRIMARY KEY(`id`)
@@ -64,7 +58,16 @@ CREATE TABLE `module`(
 `description` VARCHAR(255),
 `classes` INT,
 `courseID` INT,
-PRIMARY KEY(`id`),
-FOREIGN KEY(`courseID`) REFERENCES course(`id`)
+PRIMARY KEY(`id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `commission` ADD FOREIGN KEY (`courseID`) REFERENCES `course`(`id`);
+ALTER TABLE `commission` ADD FOREIGN KEY (`scheduleID`) REFERENCES `schedule`(`id`);
+ALTER TABLE `commission` ADD FOREIGN KEY (`classroomID`) REFERENCES `classroom`(`id`);
+
+ALTER TABLE `user` ADD FOREIGN KEY (`roleID`) REFERENCES `role`(`id`);
+
+ALTER TABLE `user_commission` ADD FOREIGN KEY (`userID`) REFERENCES `user`(`id`);
+ALTER TABLE `user_commission` ADD FOREIGN KEY (`commissionID`) REFERENCES `commission`(`id`);
+
 

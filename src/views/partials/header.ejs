@@ -4,9 +4,15 @@
             <input type="checkbox" name="menu-hamburguesa" id="menu-hamburguesa">
             <label for="menu-hamburguesa"><i class="fas fa-bars"></i></label>
             <div class="links">
-                <form action="#" method="post">
-                    <button>Iniciar Sesión</button>
-                </form>
+                <% if(user){ %>
+                    <form action="#" method="post">
+                        <button>Perfil</button>
+                    </form>
+                <% } else { %>
+                    <form action="#" method="post">
+                        <button>Iniciar Sesión</button>
+                    </form>
+                <% } %>
                 <ul>
                     <li><a href="/products">Cursos</a></li>
                     <li><a href="#">Sobre nosotros</a></li>
@@ -24,8 +30,11 @@
     <form action="#" method="post" class="vista-desktop">
         <input type="search" name="search" id="search" placeholder="Estoy buscando...">
         <i class="fa-solid fa-magnifying-glass"></i>
-    </form>                
-    <a href='/login' class="vista-desktop">Iniciar Sesión</a> 
+    </form>
+    <% if(user){ %>
+        <a href='/perfil' class="vista-desktop">Perfil</a> 
+    <% } else { %>
+        <a href='/login' class="vista-desktop">Iniciar Sesión</a> 
+    <% } %>                
+    
 </header>
-
-<% console.log(locals) %>

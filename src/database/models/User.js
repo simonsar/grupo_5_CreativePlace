@@ -23,11 +23,7 @@ module.exports = (sequelize, dataTypes) => {
         password:{
             allowNull: false,
             type: dataTypes.STRING
-        },
-        roleID:{
-            foreignKey: true,
-            type: dataTypes.INTEGER
-        }    
+        }   
     }, 
     {
         tableName: "user",
@@ -40,10 +36,9 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "roleID"
         })
         User.belongsToMany(models.Commission, {
-            as: "Commission",
-            through: "User_Commission",
-            foreignKey: "UserID",
-            otherKey: "CommissionID",
+            through: "user_commission",
+            foreignKey: "userID",
+            otherKey: "commissionID",
             timestamps: false
         });
     }
