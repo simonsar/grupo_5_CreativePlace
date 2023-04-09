@@ -50,5 +50,12 @@
     "country": "Argentina",
     "email": "Lisa@delbono.com.ar",
     "password": "$2a$10$voJQ3rR3ini7ylaMuU7JLOPDkpAXVbu2itYZXNOk3Gyb4wF3dBHb2"
+  },
+  {
+    "first_Name": "Simon",
+    "last_Name": "Sara",
+    "country": "Argentina",
+    "email": "simonsara989@gmail.com",
+    "password": "$2a$10$cfGggH6/cC9IOEqmJJ0MuuuxfFP1LEMtvnnEBCl/pIpt2cmjykpPO"
   }
 ]

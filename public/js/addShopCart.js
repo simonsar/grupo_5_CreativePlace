@@ -19,7 +19,7 @@ function addProduct(){
         img: document.getElementById('img').alt, //Tenemos una sola imagen, tenemos que subir mas y agregarlas con ejs al alt en la vista
         name: document.getElementById('name').innerText,
         description: document.getElementById('description').innerText,
-        price: document.getElementById('price').innerText.replace('$', ''), //PREGUNTA 1: name, descrption y price estan en el mismo div, debería traerlos todos juntos?
+        price: document.getElementById('price').innerText.replace('$', ''),
         
     }
 
