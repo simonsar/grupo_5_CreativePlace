@@ -4,7 +4,7 @@
             <input type="checkbox" name="menu-hamburguesa" id="menu-hamburguesa">
             <label for="menu-hamburguesa"><i class="fas fa-bars"></i></label>
             <div class="links">
-                <% if(locals.user){ %>
+                <% if(user){ %>
                     <form action="#" method="post">
                         <button>Perfil</button>
                     </form>
@@ -30,8 +30,11 @@
     <form action="#" method="post" class="vista-desktop">
         <input type="search" name="search" id="search" placeholder="Estoy buscando...">
         <i class="fa-solid fa-magnifying-glass"></i>
-    </form>                
-    <a href='/login' class="vista-desktop">Iniciar Sesión</a> 
+    </form>
+    <% if(user){ %>
+        <a href='/perfil' class="vista-desktop">Perfil</a> 
+    <% } else { %>
+        <a href='/login' class="vista-desktop">Iniciar Sesión</a> 
+    <% } %>                
+    
 </header>
-
-<% console.log(locals.user) %>

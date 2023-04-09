@@ -9,15 +9,17 @@ const path = require('path')
 const usuarioMiddle = require('./middlewares/usuario')
 
 const methodOverride = require('method-override');
-app.use(methodOverride('_method'));
-
-app.use(express.urlencoded({ extended: false}));
-app.use(express.json());
+app.use(express.static('public'));
 app.use(session({
     secret: "Secreto",
     resave: true,
     saveUninitialized: true
 }));
+app.use(methodOverride('_method'));
+
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json());
+
 
 app.use(cookie())
 
@@ -26,30 +28,11 @@ app.use(usuarioMiddle)
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.static('public'));
-
 app.use("/", mainRouter);
-
-app.use("/detalle", mainRouter);
-
-app.use('/carrito', mainRouter);
-
-app.use('/productos/editar', mainRouter);
-
-app.use('/products', mainRouter);
-
-app.use('/products/create', mainRouter);
 
 // Sprint 5
 
 app.use('/', loginRouter);
-
-app.use('/', loginRouter);
-
-app.use('/register', loginRouter);
-
-
-
 
 app.listen(process.env.PORT || 3000, function(){
     console.log("Servidor corriendo");

@@ -1,12 +1,16 @@
 const db = require('../database/models');
 
-module.exports = async (req, res, next) => {
+function usuarioMiddle (req, res, next) {
     let user = null 
     //cookie
     if(req.session && req.session.user){
         user = req.session.user
+        console.log('acá estoy!')
     }
     res.locals.user = user
     
-    return next();
+    console.log(res.locals.user)
+    next();
 }
+
+module.exports = usuarioMiddle

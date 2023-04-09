@@ -13,12 +13,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         classes: {
             type: dataTypes.INTEGER 
-        },
-        courseID:{
-            type: dataTypes.INTEGER
-        }    
+        }   
     }, 
-    {
+    {   
+        tableName: "module",
         timestamps: false
     });
 

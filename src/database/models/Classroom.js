@@ -11,13 +11,14 @@ module.exports = (sequelize, dataTypes) => {
         }   
     }, 
     {
+        tableName: "classroom",
         timestamps: false
     });
     
     Classroom.associate = (models) => {
         Classroom.hasMany(models.Commission, {
             as: "Classroom",
-            foreignKey: "commissionID"
+            foreignKey: "classroomID"
         })
     }
 

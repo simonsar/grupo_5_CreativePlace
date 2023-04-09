@@ -5,45 +5,37 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        name:{
+        name: {
             type: dataTypes.STRING
-        },
-        courseID:{
-            type: dataTypes.INTEGER
-        },
-        scheduleID:{
-            type: dataTypes.INTEGER
-        },
-        classroomID:{
-            type: dataTypes.INTEGER
-        }        
+        }
     }, 
-    {   
-        tableName: "Commission",
+    {
+        tableName: "commission",
         timestamps: false
     });
 
     Commission.associate = (models) => {
-        Commission.belongsTo(models.Classroom, {
-            as: "Classroom",
-            foreignKey: "classroomID"
-        })
         Commission.belongsTo(models.Course, {
-            as: "Course",
+            as: "course",
             foreignKey: "courseID"
         })
+        Commission.belongsTo(models.Classroom, {
+            as: "classroom",
+            foreignKey: "classroomID"
+        })
         Commission.belongsTo(models.Schedule, {
-            as: "Schedule",
+            as: "schedule",
             foreignKey: "scheduleID"
         })
         Commission.belongsToMany(models.User, {
-            as: "user",
-            through: "User_Commission",
+            through: "user_commission",
             foreignKey: "commissionID",
             otherKey: "userID",
             timestamps: false
         });
     }
+
+
     return Commission;
 
 }

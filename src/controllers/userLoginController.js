@@ -41,11 +41,44 @@ const userController = {
             console.log(error)
         }
     },
-    editarUsuario: () => {
-
+    perfil: (req, res) => {
+        db.User.findByPk(res.locals.id/* ,{include: ["Commission"]} */)
+        .then((user)=> {
+            res.render('perfil', {usuario: user});
+        })
     },
-    eliminarUsuario: () => {
-        
+    editarUsuario: (req, res) => {
+        db.User.findByPk(res.locals.id)
+            .then((user)=> {
+                res.render('edit-product.ejs', {usuario: user});
+            })
+    },
+    editarUsuarioProcess: (req, res) => {
+        let usuario = {
+            first_Name: req.body.nombre,
+            last_Name: req.body.apellido,
+            country: req.body.pais,
+            email: req.body.email,
+            password: req.body.contraseña
+        };
+        db.User.update(
+            usuario,
+        {
+            where: {
+                id: res.locals.id
+            }
+        })
+
+        res.redirect('/perfil/' + res.locals.id);
+    },
+    eliminarUsuarioProcess: () => {
+        db.User.destroy({
+            where: {
+                id: res.params.id
+            }
+        })
+
+        res.redirect('register')
     },
     register: (req, res) => {
         res.render('register')

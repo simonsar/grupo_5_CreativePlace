@@ -12,7 +12,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         }    
     }, 
-    {
+    {   
+        tableName: "schedule",
         timestamps: false
     });
 

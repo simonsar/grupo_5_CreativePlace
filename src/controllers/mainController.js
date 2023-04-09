@@ -8,14 +8,14 @@ let productos = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
 
 const controller = {
     index: (req, res) => {
-        db.Course.findAll()
+        db.Commission.findAll()
             .then((cursos)=> {
                 res.render('home', {productos: cursos});
             })
         //return res.render('home', {productos: productos})
     },                                                                              
     detalle: (req, res) => {
-        db.Course.findByPk(req.params.id/* ,{include: ["Commission"]} */)
+        db.Course.findByPk(req.params.id, {include: [{association: "commission"}]})
             .then((curso)=> {
                 res.render('detalle-de-producto', {producto: curso});
             })
@@ -80,7 +80,6 @@ const controller = {
     },
     createProcess: (req, res) => {
         let product = {
-            id: 7,
             nombre: req.body.nombre,
             precio: req.body.precio,
             descripcion: req.body.descripcion,
