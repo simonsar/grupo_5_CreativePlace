@@ -1,4 +1,4 @@
-windows.addEventListener('load', function(){
+window.addEventListener('load', function(){
     let form = document.querySelector('.form-register')
 
     form.addEventListener('submit', function(e){
@@ -32,8 +32,9 @@ windows.addEventListener('load', function(){
         }
 
         if(errors.length > 0){
-            e.preventDefault();
             let ulErrors = document.querySelector('.errors')
+            ulErrors.innerHTML = ""
+            e.preventDefault();
             for (let i = 0; i < errors.length; i++) {
                 ulErrors.innerHTML += '<li>' + errors[i] + '</li>'
                 
