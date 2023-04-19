@@ -27,15 +27,19 @@
                 <% }) 
                    } 
                 %>
+
+            <div class="errores">
+                <ul></ul>    
+            </div>
             <form method="POST" action="/register" class="form-register">
 
                 <input type="text" name="firstName" value="<%= locals.old && old.firstName ? old.firstName : ''%>" id="firstName" placeholder="Nombre">
                 
                 
-                    <input type="text" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : ''%>" id="" placeholder="Apellido">
+                    <input type="text" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : ''%>" id="lastName" placeholder="Apellido">
                 
                 
-                    <select name="country" id="">
+                    <select name="country" id="country">
                         <option value="" disabled selected>Selecciona tu país de residencia</option>
                         <option value="Argentina" <%= locals.old && old.country === 'Argentina' ? 'selected' : ''; %>>Argentina</option>
                         <option value="Bolivia" <%= locals.old && old.country === 'Bolivia' ? 'selected' : ''; %>>Bolivia</option>
@@ -52,11 +56,11 @@
                         <option value="Otro" <%= locals.old && old.country === 'Otro' ? 'selected' : ''; %>>Otro</option>
                     </select>
                 
-                    <input type="email" name="email" value="<%= locals.old && old.email ? old.email : ''%>" id="" placeholder="E-mail">
+                    <input type="email" name="email" value="<%= locals.old && old.email ? old.email : ''%>" id="email" placeholder="E-mail">
                 
 
                 
-                    <input type="password" name="password" id="" placeholder="Contraseña">
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
                 
                     
                     <button class="botones" type="submit">Registrarme</button>
