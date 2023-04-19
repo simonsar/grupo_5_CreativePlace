@@ -27,9 +27,9 @@
                 <% }) 
                    } 
                 %>
-            <form method="POST" action="/register" >
+            <form method="POST" action="/register" class="form-register">
 
-                <input type="text" name="firstName" value="<%= locals.old && old.firstName ? old.firstName : ''%>" id="" placeholder="Nombre">
+                <input type="text" name="firstName" value="<%= locals.old && old.firstName ? old.firstName : ''%>" id="firstName" placeholder="Nombre">
                 
                 
                     <input type="text" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : ''%>" id="" placeholder="Apellido">
