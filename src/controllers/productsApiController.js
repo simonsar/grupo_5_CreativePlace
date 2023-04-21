@@ -1,9 +1,9 @@
-const db = require('../database/models');
+/*const db = require('../database/models');
 
 
 
 module.exports = {
-    detail: async (req, res) => {
+    detail: async (req, res) => {//falta hacer este, me perdi
         let response = {}
         try {
             response.status = 200
@@ -25,14 +25,16 @@ module.exports = {
         let response = {}
         try {
             response.status = 200
-            const listado = await db.User.findAll()
+            const listado = await db.Course.findAll({include: [{association:'categoria'}]})
             response.count = listado.length
-            response.users = listado.map((usuario) => {
+            response.countByCategory = //no tenemos categorias
+            response.products = listado.map((course) => {
                 return {
-                    id: usuario.id ,
-                    nombre: usuario.nombre,
-                    email: usuario.email,
-                    detail: '/api/users/' + usuario.id
+                    id: course.id ,
+                    nombre: course.nombre,
+                    descripcion: course.descripcion,
+                    detail: '/api/products/' + usuario.id,
+                    category: course.categoria
 
                 }
             })
@@ -45,3 +47,4 @@ module.exports = {
         }
     }
     }
+    */

@@ -10,6 +10,7 @@ const usuarioMiddle = require('./middlewares/usuario')
 
 const methodOverride = require('method-override');
 const userApiRouter = require("./routes/userApiRouter");
+//const productsApiRouter = require("./routes/productsApiRouter");
 app.use(express.static('public'));
 app.use(session({
     secret: "Secreto",
@@ -37,6 +38,7 @@ app.use("/", mainRouter);
 
 app.use('/', loginRouter);
 app.use('/api/users', userApiRouter)
+//app.use('/api/products', productsApiRouter)
 
 app.listen(process.env.PORT || 3000, function(){
     console.log("Servidor corriendo");
