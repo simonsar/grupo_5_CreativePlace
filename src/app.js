@@ -9,6 +9,7 @@ const path = require('path')
 const usuarioMiddle = require('./middlewares/usuario')
 
 const methodOverride = require('method-override');
+const userApiRouter = require("./routes/userApiRouter");
 app.use(express.static('public'));
 app.use(session({
     secret: "Secreto",
@@ -16,6 +17,8 @@ app.use(session({
     saveUninitialized: true
 }));
 app.use(methodOverride('_method'));
+
+
 
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
@@ -33,6 +36,7 @@ app.use("/", mainRouter);
 // Sprint 5
 
 app.use('/', loginRouter);
+app.use('/api/users', userApiRouter)
 
 app.listen(process.env.PORT || 3000, function(){
     console.log("Servidor corriendo");
