@@ -7,19 +7,19 @@
     <%- include('./partials/header')%>
 <!--MAIN START-->
     <main>
-        <form method="POST" action="/products/create">
+        <form method="POST" action="/products/create" class="create-product">
             <section class="section-1">
                 <div class="imagen">
                 <img src="/img/upload img.jpg" alt="img" class="imagen">
                 </div>
                 <article class="detalle-producto">
-                    <input type="text" placeholder="Nombre del producto" name="nombre">
+                    <input type="text" placeholder="Nombre del producto" name="nombre" id="name">
                     
-                    <textarea id="text" name="descripcion" rows="8" cols="40" placeholder="Descripción"></textarea>
+                    <textarea id="text" name="descripcion" rows="8" cols="40" placeholder="Descripción" id="description"></textarea>
                     
                     <div class="categoria-precios"> 
-                        <input type="text" name="categoria" placeholder="Categoría">
-                        <input type="number" name="precio" placeholder="Precio">
+                        <input type="text" name="categoria" placeholder="Categoría" id="category">
+                        <input type="number" name="precio" placeholder="Precio" id="price">
                     </div> 
                 </article>
             </section>
@@ -38,9 +38,9 @@
                     <article class="modalidad1">
                         
                             <p class="subtitulo-main"><i class="fa-solid fa-laptop"></i> Cronograma</p>
-                            <input class="descripcion" type="text" name="dias" placeholder="Días de clase">
+                            <input class="descripcion" type="text" name="dias" placeholder="Días de clase" id="course-days">
 
-                            <input class="descripcion" type="text" name="horarios" placeholder="Horarios de clase">
+                            <input class="descripcion" type="text" name="horarios" placeholder="Horarios de clase" id="schedules">
                     </article>
                     <article class="modalidad1">
                             <p class="subtitulo-main"><i class="fa-solid fa-calendar-days"></i> Fecha de inicio</p>

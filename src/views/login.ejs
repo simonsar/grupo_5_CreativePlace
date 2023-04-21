@@ -13,7 +13,10 @@
         
         <section class="seccion-2">
             <h2>Hola, ¡volviste!</h2>
-            <form action="/login" method="POST"> 
+            <div class="errors">
+                <ul></ul>    
+            </div>
+            <form action="/login" method="POST" class="form-login"> 
                 <input type="email" name="email" class="email" placeholder="Correo electrónico">
                 <% if (locals.errors && errors.email) { %>
                     <div class="text-danger">
@@ -35,7 +38,7 @@
         
  <!-- Main -->
     </main>
-
     <%- include('./partials/footer')%>
+    <script src="/js/validationLogin.js"></script>
 </body>
 </html>
