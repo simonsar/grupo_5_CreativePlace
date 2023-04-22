@@ -18,7 +18,8 @@
                     <textarea id="text" name="descripcion" rows="8" cols="40"><%= producto.description %></textarea>
                     
                     <div class="categoria-precios"> 
-                        <input type="number" name="precio" placeholder="Precio" value= "<%= producto.price %>">
+                        <input type="text" name="categoria" placeholder="Categoría" id="category">
+                        <input type="number" name="precio" placeholder="Precio" value= "<%= producto.price %>" id="price">
                     </div> 
                 </article>
             </section>
@@ -28,21 +29,19 @@
                 <h2>Modalidad</h2>
                     <article class="modalidad1">
                         
-                            <p class="subtitulo-main"><i class="fa-solid fa-laptop"></i> Cronograma</p>
-                            <input class="descripcion" type="text" name="dias" value= "<%= //producto.cronograma.dias%>">
-
-                            <input class="descripcion" type="text" name="horarios" value= "<%= //producto.cronograma.horarios%>">
+                            <label class="subtitulo-main"><i class="fa-solid fa-laptop"></i> Cronograma</label>
+                            <input class="descripcion" type="text" name="dias" value= "<%= //producto.cronograma.dias%>" id="courseDays">
                     </article>
                     <article class="modalidad1">
-                            <p class="subtitulo-main"><i class="fa-solid fa-calendar-days"></i> Fecha de inicio</p>
-                            <input class="descripcion" type="date" name="fechaInicio" value= "<%= //producto.fechaInicio%>"> 
+                            <label class="subtitulo-main"><i class="fa-solid fa-calendar-days"></i> Fecha de inicio</label>
+                            <input class="descripcion" type="date" name="fechaInicio" value= "<%= //producto.fechaInicio%>" id="dateStart"> 
 
-                            <p class="subtitulo-main"><i class="fa-solid fa-calendar-days"></i> Fecha de finalización</p>
-                            <input class="descripcion" type="date" name="fechaFinalizacion" value= <%= //producto.fechaFinalizacion%>>
+                            <label class="subtitulo-main"><i class="fa-solid fa-calendar-days"></i> Fecha de finalización</label>
+                            <input class="descripcion" type="date" name="fechaFinalizacion" value= <%= //producto.fechaFinalizacion%> id='dateEnd'>
                     </article>
                     <article class="modalidad1">
-                            <p class="subtitulo-main"><i class="fa-regular fa-clock"></i> Turnos</p>
-                            <select class="descripcion" name="turno" id="">
+                            <label class="subtitulo-main"><i class="fa-regular fa-clock"></i> Turnos</label>
+                            <select class="descripcion" name="turno" id="schedules">
                                 <option value="" disabled selected>Selecciona el turno elegido</option>
                                 <option value="Mañana">Mañana</option>
                                 <option value="Tarde">Tarde</option>
@@ -62,5 +61,6 @@
     </main>
 <!--MAIN ENDS-->
     <%- include('./partials/footer')%>
+    <script src="/js/validationEditProduct.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@ window.addEventListener('load', function(){
         let errors = [];
 
         let image = document.querySelector('.imagen')
-        if(image.value == ''){//preguntar si esto esta bien
+        if(image.value == ''){//preguntar si esto esta bien (aylu me mando link de stack overflow con la rta)
             errors.push('El producto debe tener una imagen.')
         }
 
@@ -36,13 +36,9 @@ window.addEventListener('load', function(){
             errors.push('Debes elegir dias en Cronograma.')
         }
 
-        let schedules = document.getElementById('schedules')
-        if(schedules.value == ''){
-            errors.push('Debes elegir los horarios de clase.')
-        }
 
         let dateStart = document.getElementById('dateStart')
-        if(dateStart.value == 0){//preguntar si esto esta bien
+        if(dateStart.value == ''){
             errors.push('Debes elegir una fecha de inicio.')
         }
 
@@ -51,8 +47,8 @@ window.addEventListener('load', function(){
             errors.push('Debes elegir una fecha de finalización.')
         }
 
-        let shift = document.getElementById('schedules')
-        if(shift.value == 0){
+        let shift = document.getElementById('shift')//este esta mal tengo que corregirlo
+        if(shift && shift.value ==""){
             errors.push('Debes elegir un turno.')
         }
         

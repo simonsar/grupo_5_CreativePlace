@@ -36,11 +36,6 @@ window.addEventListener('load', function(){
             errors.push('Debe elegir dias en Cronograma.')
         }
 
-        let schedules = document.getElementById('schedules')
-        if(schedules.value == ''){
-            errors.push('Debes elegir los horarios de clase.')
-        }
-
         let dateStart = document.getElementById('dateStart')
         if(dateStart.value == undefined){//preguntar si esto esta bien
             errors.push('Debes elegir una fecha de inicio.')

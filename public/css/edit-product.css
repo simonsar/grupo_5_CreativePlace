@@ -111,7 +111,7 @@ main form section input, main form section textarea {
     border-radius: 10px;
     padding: 2%;
     width: 100%;
-    margin-top:  2%;
+    margin:  2%;
     font-size: 16px;
 }
 
@@ -285,7 +285,8 @@ div.copyright p{
     .imagen {
         display: flex;
         align-self: left;
-        width: 50vw;
+        width: 30vw;
+        margin-right: 20px;
 
     }
 

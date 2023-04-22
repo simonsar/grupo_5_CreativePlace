@@ -1,16 +1,27 @@
-<body>
+<%- include("./partials/head", {link :"/css/perfil.css", titulo: "Creative Place Usuario"}) %> <!--Tengo que sacar el iniciar sesion-->
     <link rel="stylesheet" href="/css/perfil.css">
-    <title>Perfil</title>
-<!-- Header -->
+    <title>Creative Place Usuario</title>
+<body>
     <%- include('./partials/header')%>
-    
-<!-- Main -->
+<!-- MAIN--> 
+
     <main>
+
         <section>
-            <img src="img/perfil.jpg" alt="" class="imagen">
+            <h1 class="saludo">
+                Hola <%= user %> !
+            </h1>
         </section>
-    </main>
-<!-- footer -->
+
+        <section>
+            <h2 class="mis-cursos">
+                Mis cursos <!--traer cursos con ejs-->
+            </h2>
+        </section>
+        
+    </main> 
+
+<!--Termina MAIN-->
     <%- include('./partials/footer')%>
 </body>
 </html>
