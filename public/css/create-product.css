@@ -111,7 +111,7 @@ main form section input, main form section textarea {
     border-radius: 10px;
     padding: 2%;
     width: 100%;
-    margin-top:  2%;
+    margin:  2%;
     font-size: 16px;
 }
 
@@ -122,6 +122,8 @@ main form section input, main form section textarea {
 .categoria-precios{
     display: flex;
     flex-direction: row;
+    
+   
 }
 
 .modulo {
@@ -285,7 +287,8 @@ div.copyright p{
     .imagen {
         display: flex;
         align-self: left;
-        width: 50vw;
+        width: 30vw;
+        margin-right: 20px;
 
     }
 

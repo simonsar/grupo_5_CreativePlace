@@ -28,6 +28,6 @@ router.post('/products/create', mainController.createProcess); //Accion de creac
 
 router.delete('/delete/:id', mainController.deleteProcess);
 
-
+//DEBERIAMOS EDITAR QUE EN LINEA 25 Y 27 USAMOS "PRODUCTS" Y EN LA 15 Y 17 "PRODUCTOS"
 
 module.exports = router;

@@ -7,13 +7,13 @@
     <%- include('./partials/header')%>
 <!--MAIN START-->
     <main>
-        <form method="POST" action="/productos/editar/<%=producto.id%>?_method=PUT">
+        <form method="POST" action="/productos/editar/<%=producto.id%>?_method=PUT" class="form-edit-product">
             <section class="section-1">
                 <div class="imagen">
                 <img src="/img/upload img.jpg" alt="img" class="imagen">
                 </div>
                 <article class="detalle-producto">
-                    <input type="text" name="nombre" value= <%= producto.name%>>
+                    <input type="text" name="nombre" value= <%= producto.name%> id='name'>
                     
                     <textarea id="text" name="descripcion" rows="8" cols="40"><%= producto.description %></textarea>
                     
@@ -23,15 +23,7 @@
                 </article>
             </section>
 
-            <section class="section-modulo">
-                <article class="modulo"> 
-                    <p class="subtitulo-main">Módulo 1</p>
-                    <br>
-                    <textarea class="descripcion" id="text" name="modulos" rows="8" cols="40" placeholder="Descripción"></textarea>
-                    <br/>
-                </article>
-                <button type="button" class="boton-agregar">Agregar <p>+</p></button>
-            </section>
+        
             <section class="section-modalidad">
                 <h2>Modalidad</h2>
                     <article class="modalidad1">

@@ -1,5 +1,5 @@
 window.addEventListener('load', function(){
-    let form = document.querySelector('.create-product')
+    let form = document.querySelector('.form-edit-product')
 
     form.addEventListener('submit', function(e){
         e.preventDefault();
@@ -16,8 +16,8 @@ window.addEventListener('load', function(){
             errors.push('El producto debe tener un nombre.')
         }
 
-        let description = document.getElementById('description')
-        if(description.value == ''){
+        let description = document.getElementById('text')
+        if(description.innerText == '' ){
             errors.push('El producto debe tener una descripción.')
         }
 
@@ -41,8 +41,21 @@ window.addEventListener('load', function(){
             errors.push('Debes elegir los horarios de clase.')
         }
 
+        let dateStart = document.getElementById('dateStart')
+        if(dateStart.value == undefined){//preguntar si esto esta bien
+            errors.push('Debes elegir una fecha de inicio.')
+        }
 
+        let dateEnd = document.getElementById('dateEnd')
+        if(dateEnd.value == undefined){
+            errors.push('Debes elegir una fecha de finalización.')
+        }
 
+        let shift = document.getElementById('schedules')
+        if(shift.value == undefined){
+            errors.push('Debes elegir un turno.')
+        }
+        
         if(errors.length > 0){
             let ulErrors = document.querySelector('.errors')
             ulErrors.innerHTML = ""
