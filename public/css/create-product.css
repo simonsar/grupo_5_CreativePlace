@@ -96,7 +96,8 @@ header article form button{
 /*Main*/
 
 main{
-    margin-top: 3%;
+    height: 75vh;
+    margin: 3% 0%;
     background-color: #EDEDED;
     padding: 3%;
     display: flex;
