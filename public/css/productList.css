@@ -100,10 +100,14 @@ header article form button{
     
 }
 main {
-height: 90%;
-background-color: white;
+    margin: 3% 0%;
+    height: 79.5vh;
+    background-color: #EDEDED;
 }
 
+h1 {
+    font-size: 30px;
+}
 .contenedor-lista {
 display: flex;
 justify-content: center;

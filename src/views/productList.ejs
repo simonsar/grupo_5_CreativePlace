@@ -8,10 +8,7 @@
     <main>
         <section class="contenedor-lista">
         <h1>Listado de productos</h1>
-        <form action="/products/search" method="GET">
-            <input type="text" placeholder="Busca un producto" name="search">
-            <input class="boton-buscar" type="submit" value="Buscar">
-        </form>
+        
         <ul>
             <% for (let i = 0; i < productos.length; i++) { %>
                 <li>
@@ -20,10 +17,11 @@
             <% } %>
         </ul>
     </section>
+    <% if(user && user.roleID == 1){ %>
     <section class="por_ahora">
         <a class="por_ahora_boton" href="/products/create">Crear Producto</a>
     </section>
-    
+    <% } %>
     </main>
     <!--MAIN ENDS-->
     <%- include('./partials/footer')%>
