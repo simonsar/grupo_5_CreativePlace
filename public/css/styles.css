@@ -177,9 +177,11 @@ main section a {
 footer{
     background-color: #d9d9d9;
     padding: 15px;
+    
 }
 
 footer p{
+    font-size: 25px;
     margin: 0px;
     position: relative;
 }
@@ -224,12 +226,6 @@ footer section div.copyright{
 
 div.copyright p{
     font-size: 20px;
-}
-
-/*Footer*/
-
-.vista-desktop{
-    display: none;
 }
 
 @media(min-width:1024px){
