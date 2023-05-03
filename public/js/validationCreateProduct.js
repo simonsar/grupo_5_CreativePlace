@@ -16,10 +16,10 @@ window.addEventListener('load', function(){
             errors.push('El producto debe tener un nombre.')
         }
 
-        let description = document.getElementById('text')
+        /*let description = document.getElementById('text')
         if(description.innerText == '' ){
             errors.push('El producto debe tener una descripción.')
-        }
+        }*/
 
         let category = document.getElementById('category')
         if(category.value == ''){

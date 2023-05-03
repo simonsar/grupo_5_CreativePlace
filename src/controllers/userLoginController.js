@@ -29,6 +29,7 @@ const userController = {
                 }
                 req.session.user = usuario
                 res.locals.user = usuario
+                console.log(req.session.user);
                 return res.redirect('/'/*perfil*/);
             }else{
                 return res.render('login',{
@@ -94,7 +95,8 @@ const userController = {
                 last_Name: req.body.lastName,
                 country: req.body.country,
                 email: req.body.email,
-                password: bcryptjs.hashSync(req.body.password, 10)
+                password: bcryptjs.hashSync(req.body.password, 10),
+                roleID: 2
             }
             users.push(user);
 

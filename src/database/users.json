@@ -71,5 +71,19 @@
     "country": "Argentina",
     "email": "Asdasd_00@asdasd.com",
     "password": "$2a$10$4CS8/CN7cqxN0l1QQkrlZe2kIT4YrDs9ciEy6RugjDTLMevGdheai"
+  },
+  {
+    "first_Name": "lisa",
+    "last_Name": "delbono",
+    "country": "Argentina",
+    "email": "lisa@delbono.com.ar",
+    "password": "$2a$10$2gfwGPftUQKA5bj1ecBLQuWU8ddAQqELVLjFFQjjZfTywK.aoc6TC"
+  },
+  {
+    "first_Name": "asd",
+    "last_Name": "asd",
+    "country": "Argentina",
+    "email": "asd@asd.com",
+    "password": "$2a$10$OzgWgqEf3Bpi7w/9HROIwevfxV5mHmSLzXfN4mbDauBnEGolq/wzW"
   }
 ]
