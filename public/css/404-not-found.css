@@ -93,7 +93,7 @@ header article label{
     padding: 10px;
 }
 
-header article form button{
+a.vista-mobile{
     background-color: #4e69cb;
     border: #4e69cb;
     width: 80%;
@@ -101,6 +101,8 @@ header article form button{
     border-radius: 10px;
     align-self: center;
     color: white;
+    text-decoration: none;
+    padding-top: 3.5%;
 }
 
 .logo-bars{
