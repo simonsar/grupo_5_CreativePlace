@@ -1,10 +1,13 @@
 <%- include("./partials/head", {link :"/css/404-not-found.css", titulo: "404 not found"}) %>
+<%- include('./partials/header')%>
 
 <body>
-    <h1>404</h1>
-    <h2>Page not found</h2>
-    <h3>Page are you looking is not available</h3>
-    <a href="/"><button class="button" >Back to home</button></a>
+    <div class="notFound">
+        <h1>404</h1>
+        <h2>Page not found</h2>
+        <h3>Ups! Página no encontrada...</h3>
+        <a href="/"><button class="button" >Ir al home!</button></a>
+    </div>
 </body>
 
 <%- include('./partials/footer')%>

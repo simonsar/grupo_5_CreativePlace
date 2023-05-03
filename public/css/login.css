@@ -108,6 +108,7 @@ main{
     flex-direction: column;
     margin: 5%;
     line-height: 50px;
+    height: 79.8vh;
 }
 
 main section.seccion-1{
@@ -134,6 +135,7 @@ main section.seccion-2 form{
     height: 70vh;
     line-height: 50px;
     align-items: center;
+    margin-top: 10%;
 }
 
 main section.seccion-2 form input, main section.seccion-2 form select{
@@ -275,7 +277,7 @@ div.copyright p{
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 20%;
+        margin-top: 33%;
     }
     main section.seccion-1{
         display: flex;

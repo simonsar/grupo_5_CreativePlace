@@ -17,21 +17,21 @@ window.addEventListener('load', function(){
         }
 
         let description = document.getElementById('text')
-        if(description.innerText == '' ){
+        if(description.value == '' ){
             errors.push('El producto debe tener una descripción.')
         }
 
-        let category = document.getElementById('category')
+        /*let category = document.getElementById('category')
         if(category.value == ''){
             errors.push('El producto debe tener una categoría.')
-        }
+        }*/
 
         let price = document.getElementById('price')
         if(price.value <= 0){
             errors.push('Debes asignarle un precio al producto.')
         }
 
-        let courseDays = document.getElementById('course-days')
+        /*let courseDays = document.getElementById('course-days')
         if(courseDays.value == ''){
             errors.push('Debes elegir dias en Cronograma.')
         }
@@ -50,7 +50,7 @@ window.addEventListener('load', function(){
         let shift = document.getElementById('shift')//este esta mal tengo que corregirlo
         if(shift && shift.value ==""){
             errors.push('Debes elegir un turno.')
-        }
+        }*/ 
         
         if(errors.length > 0){
             let ulErrors = document.querySelector('.errors')
