@@ -8,7 +8,7 @@ let productos = JSON.parse(fs.readFileSync(productosJSON, 'utf-8'));
 
 const controller = {
     index: (req, res) => {
-        db.Commission.findAll()
+        db.Course.findAll()
             .then((cursos)=> {
                 res.render('home', {productos: cursos});
             })
