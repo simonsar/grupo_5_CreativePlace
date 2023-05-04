@@ -1,15 +1,19 @@
 const db = require('../database/models');
 
-function usuarioMiddle (req, res, next) {
+async function usuarioMiddle (req, res, next) {
     let user = null 
-    //cookie
+    if (req.cookies && req.cookies.user) {
+        req.session.user = await db.User.findOne({
+            where:{email: req.cookies.user}
+        })
+    }
     if(req.session && req.session.user){
         user = req.session.user
-        console.log('acá estoy!')
+        //console.log('acá estoy!')
     }
     res.locals.user = user
     
-    console.log(res.locals.user)
+    //console.log(res.locals.user)
     next();
 }
 

@@ -6,8 +6,9 @@ window.addEventListener('load', function(){
 
         let errors = [];
 
-        let image = document.querySelector('.imagen')
-        if(image.value == ''){//preguntar si esto esta bien (aylu me mando link de stack overflow con la rta)
+        let image = document.querySelector('#createImage')
+        //console.log(image.value)
+        if(image.value == ''){
             errors.push('El producto debe tener una imagen.')
         }
 

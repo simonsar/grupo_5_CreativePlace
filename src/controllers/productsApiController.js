@@ -1,40 +1,44 @@
-/*const db = require('../database/models');
+const { Association } = require('sequelize');
+const db = require('../database/models');
 
 
 
 module.exports = {
-    detail: async (req, res) => {//falta hacer este, me perdi
+    detail: async (req, res) => {//Este no funciona
         let response = {}
         try {
             response.status = 200
-            const usuario = await db.User.findByPk(req.params.id)
-            usuario.password = undefined
-            usuario.role_id = undefined
-            response = {...usuario.dataValues, ...response}
-            response.rutaImg = '/img/img-users/' + usuario.imagen
+            const course = await db.Course.findByPk(req.params.id, {include: [{association: 'commission'}]} )
+            response = {...course.dataValues, ...response}
+            response.image = '/img/img-courses/' + course.image
             return res.json(response)
             
             }catch (error) {
             response.status = 403
             response.msg = error.msg
+            console.log(error)
             return res.json(response)
-            }       
+            }    
+               
         },
 
     list: async (req, res)=>{
         let response = {}
         try {
             response.status = 200
-            const listado = await db.Course.findAll({include: [{association:'categoria'}]})
-            response.count = listado.length
-            response.countByCategory = //no tenemos categorias
+            const listado = await db.Course.findAll({include: [{association:'commission'}]})
+            const commission = await db.Commission.findAll({include: [{association:'course'}]})
+            response.countByCommission = {}//no tenemos categorias
+            commission.forEach(commission => {
+                response.countByCommission[commission.commission] = commission.course.length
+            });
             response.products = listado.map((course) => {
                 return {
                     id: course.id ,
-                    nombre: course.nombre,
-                    descripcion: course.descripcion,
-                    detail: '/api/products/' + usuario.id,
-                    category: course.categoria
+                    nombre: course.name,
+                    descripcion: course.description,
+                    detail: '/api/products/' + course.id,
+                    comission: course.comission
 
                 }
             })
@@ -47,4 +51,4 @@ module.exports = {
         }
     }
     }
-    */
+    

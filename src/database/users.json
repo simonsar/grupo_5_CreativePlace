@@ -85,5 +85,45 @@
     "country": "Argentina",
     "email": "asd@asd.com",
     "password": "$2a$10$OzgWgqEf3Bpi7w/9HROIwevfxV5mHmSLzXfN4mbDauBnEGolq/wzW"
+  },
+  {
+    "first_Name": "Simon",
+    "last_Name": "Sara",
+    "country": "Argentina",
+    "email": "monsi_simon@hotmail.com",
+    "password": "$2a$10$5w/PzgEKOuXaGejHTb5PfOcrjCKLLkNbQrNXunWwrWAAjzERadlOi",
+    "roleID": 2
+  },
+  {
+    "first_Name": "Simon",
+    "last_Name": "Sara",
+    "country": "Argentina",
+    "email": "monsi_simon@hotmail.com",
+    "password": "$2a$10$UW6zzEjDQeZAculW5p8X.OKhK86jidAvlSkcbLDOeusnc4DsPlOve",
+    "roleID": 2
+  },
+  {
+    "first_Name": "Simon",
+    "last_Name": "Sara",
+    "country": "Argentina",
+    "email": "monsi_simon@hotmail.com",
+    "password": "$2a$10$timZ.1Wj1vdcmU16u8EjQ.EQtnD54bwdIRVuWbbS7zEAPUTMvWMcq",
+    "roleID": 2
+  },
+  {
+    "first_Name": "Monse",
+    "last_Name": "Rodriguez",
+    "country": "Argentina",
+    "email": "monsserodriguez99@gmail.com",
+    "password": "$2a$10$MUC.9igRS0h8J6o6jc6kremoWdocknCcKwcXn1HsqDj2a467VtcV2",
+    "roleID": 2
+  },
+  {
+    "first_Name": "Manuel",
+    "last_Name": "Belgrano",
+    "country": "Argentina",
+    "email": "manubelgrano@gmail.com",
+    "password": "$2a$10$2kSnNtJTHHnr5LIKJRqF2.GYFtGdO/kFax1oA0PzRgwLygIrBKPBy",
+    "roleID": 2
   }
 ]

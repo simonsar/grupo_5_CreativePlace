@@ -177,10 +177,13 @@ main form section input, main form section textarea {
 
 .imagen{
     width: 90%;
-    display: block;
+    display: block  ;
     margin: auto
 }
 
+.createImage{
+    
+}
 .boton-agregar{
     background-color: #D9D9D9;
     border: #D9D9D9;
@@ -301,6 +304,7 @@ div.copyright p{
         display: flex;
         flex-direction: column;
         width: 50vw;
+        margin-left: 40px
     }
     
     form {

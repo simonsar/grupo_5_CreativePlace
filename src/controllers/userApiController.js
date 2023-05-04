@@ -9,9 +9,9 @@ module.exports = {
             response.status = 200
             const usuario = await db.User.findByPk(req.params.id)
             usuario.password = undefined
-            usuario.role_id = undefined
+            usuario.roleID = undefined//esto calculo que le falta un const "role" para traer los roles, preguntar
             response = {...usuario.dataValues, ...response}
-            response.rutaImg = '/img/img-users/' + usuario.imagen
+            //response.rutaImg = '/img/img-users/' + usuario.imagen (si aplicamos imagen de perfil va esto)
             return res.json(response)
             
             }catch (error) {
@@ -27,12 +27,12 @@ module.exports = {
             response.status = 200
             const listado = await db.User.findAll()
             response.count = listado.length
-            response.users = listado.map((usuario) => {
+            response.users = listado.map((user) => {
                 return {
-                    id: usuario.id ,
-                    nombre: usuario.nombre,
-                    email: usuario.email,
-                    detail: '/api/users/' + usuario.id
+                    id: user.id ,
+                    nombre: user.nombre,
+                    email: user.email,
+                    detail: '/api/users/' + user.id
 
                 }
             })

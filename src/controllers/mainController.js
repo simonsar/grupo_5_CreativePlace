@@ -94,9 +94,11 @@ const controller = {
         };
 
         db.Course.create({
-            name: product.nombre,
-            price: product.precio,
-            description: product.descripcion
+
+            name: req.body.nombre,
+            price: req.body.precio,
+            description: req.body.descripcion,
+            image: req.file.filename //tengo que agregar la columna a db porque no está
         })
 
          

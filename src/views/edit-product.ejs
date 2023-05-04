@@ -10,7 +10,7 @@
         <form method="POST" action="/productos/editar/<%=producto.id%>?_method=PUT" class="form-edit-product">
             <section class="section-1">
                 <div class="imagen">
-                <img src="/img/upload img.jpg" alt="img" class="imagen">
+                <img src="/img/img-courses/<%= producto.image%>" alt="img" class="imagen">
                 </div>
                 <article class="detalle-producto">
                     <input type="text" name="nombre" value= <%= producto.name%> id='name'>

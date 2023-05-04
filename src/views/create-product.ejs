@@ -10,10 +10,11 @@
         <div class="errors">
             <ul></ul>    
         </div>
-        <form method="POST" action="/products/create" class="create-product">
+        <form method="POST" action="/products/create" class="create-product" enctype="multipart/form-data">
             <section class="section-1">
                 <div class="imagen">
-                <img src="/img/upload img.jpg" alt="img" class="imagen">
+                    <input type="file" class="createImage" id="createImage" name="createImage">
+                    <label for="createImage"><img src="/img/img-courses/upload img.jpg" alt="img" class="imagen"></label>
                 </div>
                 <article class="detalle-producto">
                     <input type="text" placeholder="Nombre del producto" name="nombre" id="name">

@@ -21,6 +21,7 @@ const userController = {
 
             if(usuario){
                 if (!bcryptjs.compareSync(req.body.password, usuario.password)){
+                    //console.log(usuario.password, req.body.password)
                     return res.render('login',{
                         errors: {
                             msg: 'La contraseña no es correcta'
@@ -28,8 +29,11 @@ const userController = {
                     })
                 }
                 req.session.user = usuario
+                if (req.body.remember) {
+                    res.cookie('user', req.body.email, {maxAge: 1000*60*60*24})
+                }
                 res.locals.user = usuario
-                console.log(req.session.user);
+                //console.log(req.session.user);
                 return res.redirect('/'/*perfil*/);
             }else{
                 return res.render('login',{
@@ -110,7 +114,7 @@ const userController = {
                 errors: errors.array(),
                 old: req.body
             });
-            console.log(errors)
+            //console.log(errors)
         }
 
         /*let userInDb = User.findByField('email', req.body.email);
