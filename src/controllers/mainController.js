@@ -133,6 +133,10 @@ const controller = {
         })
 
         res.redirect('/products')
+    },
+
+    developing: (req,res) => {
+        res.render('developing.ejs')
     }
 
 };

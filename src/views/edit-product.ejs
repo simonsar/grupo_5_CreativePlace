@@ -7,6 +7,9 @@
     <%- include('./partials/header')%>
 <!--MAIN START-->
     <main>
+        <div class="errors">
+            <ul></ul>    
+        </div>
         <form method="POST" action="/productos/editar/<%=producto.id%>?_method=PUT" class="form-edit-product">
             <section class="section-1">
                 <div class="imagen">
@@ -47,7 +50,7 @@
                                 <option value="Tarde">Tarde</option>
                                 <option value="Noche">Noche</option>
                             </select>
-                        </article>
+                        </article>  
                     </section>-->
 
                     <section class="por_ahora">

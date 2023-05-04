@@ -42,6 +42,8 @@ router.post('/products/create', upload.single('createImage'),mainController.crea
 
 router.delete('/delete/:id', sessionUsuario, mainController.deleteProcess);
 
+router.get('/developing',mainController.developing )
+
 //DEBERIAMOS EDITAR QUE EN LINEA 25 Y 27 USAMOS "PRODUCTS" Y EN LA 15 Y 17 "PRODUCTOS"
 
 module.exports = router;

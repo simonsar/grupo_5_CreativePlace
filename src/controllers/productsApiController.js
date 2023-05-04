@@ -28,20 +28,18 @@ module.exports = {
             response.status = 200
             const listado = await db.Course.findAll({include: [{association:'commission'}]})
             const commission = await db.Commission.findAll({include: [{association:'course'}]})
-            response.countByCommission = {}//no tenemos categorias
-            commission.forEach(commission => {
-                response.countByCommission[commission.commission] = commission.course.length
-            });
+
             response.products = listado.map((course) => {
                 return {
                     id: course.id ,
                     nombre: course.name,
                     descripcion: course.description,
                     detail: '/api/products/' + course.id,
-                    comission: course.comission
+                    commissions: course.commission.length
 
                 }
             })
+            console.log(response)
             return res.json(response)
 
         } catch (error) {
