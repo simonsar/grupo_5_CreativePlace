@@ -177,12 +177,15 @@ main form section input, main form section textarea {
 
 .imagen{
     width: 90%;
-    display: block  ;
-    margin: auto
+    display: block ;
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .createImage{
-    
+    width: 95%;
+    align-self: center;
 }
 .boton-agregar{
     background-color: #D9D9D9;
