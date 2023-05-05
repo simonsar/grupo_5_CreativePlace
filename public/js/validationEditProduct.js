@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+/*window.addEventListener('load', function(){
     let form = document.querySelector('.form-edit-product')
 
     form.addEventListener('submit', function(e){
@@ -63,4 +63,4 @@ window.addEventListener('load', function(){
             form.submit()
         }
     })
-})
+})*/
