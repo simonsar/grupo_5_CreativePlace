@@ -27,7 +27,7 @@ window.addEventListener('load', function(){
         //}
 //
         let price = document.getElementById('price')
-        if(price.value > 0){
+        if(price.value <= 0 || price.value == null){
         errors.push('Debes asignarle un precio al producto.')
         }
 //
